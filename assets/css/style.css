@@ -1,0 +1,63 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    color: #D5D5D5;
+    font-size: 80%;
+    background: #191919;
+    background: url(../images/wood-texture-dark.jpeg) top center / 100% no-repeat;
+}
+
+
+/* Content */
+
+h1 {
+    padding: 24px 0 14px 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 245%;
+    font-weight: 400;
+    letter-spacing: 0.2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.story-frame {
+    text-align: center;
+}
+
+.story-image {
+    height: min-content;
+}
+
+.story-frame img {
+    height: 34.5vw;
+    border: 20px solid #191919;
+}
+
+button {
+    width: 26.8%;
+    height: 20px;
+    padding: 24px 100px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 130%;
+    font-weight: 600;
+    color: #D5D5D5;
+    line-height: 0px;
+    text-transform: uppercase;
+    background-color: #494949;
+    border: 20px solid #191919;
+}
+
+
+/* Footer */
+
+footer h3 {
+    color: #646464;
+    margin: 5px 0 5px 22%;
+}
