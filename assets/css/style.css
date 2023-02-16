@@ -73,6 +73,10 @@ button {
     border-left-width: 24px;
 }
 
+.hidden {
+    display: none;
+}
+
 
 /* Footer */
 
