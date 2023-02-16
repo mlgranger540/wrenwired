@@ -9,6 +9,8 @@
     <title>Wrenwired</title>
     <!-- Stylesheets -->
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- JavaScript -->
+    <script src="assets/js/index.js"></script>
 </head>
 
 <body>
@@ -18,12 +20,14 @@
         <div class="story-frame">
             <!-- Story Frame Image -->
             <div class="story-image">
-                <img src="https://images.pexels.com/photos/1227513/pexels-photo-1227513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="An empty field" title="An empty barren field with trees in the distance">
+                <img id="starting-point-img" src="assets/images/starting-point-ph.jpeg" alt="An empty field" title="An empty barren field with trees in the distance">
+                <img id="look-left-img" class="hidden" src="assets/images/look-left-ph.jpeg" alt="An empty field" title="The field stretches out to the left">
+                <img id="look-right-img" class="hidden" src="assets/images/look-right-ph.jpeg" alt="An empty field" title="The field stretches out to the right">
             </div>
             <!-- Turn Buttons -->
             <div class="turn-buttons">
-                <button id="look-left">Look left</button>
-                <button id="look-right">Look right</button>
+                <button type="button" id="look-left" onclick="cycleLeft()">Look left</button>
+                <button type="button" id="look-right" onclick="cycleRight()">Look right</button>
             </div>
         </div>
     </section>
