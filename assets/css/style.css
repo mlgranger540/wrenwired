@@ -30,7 +30,6 @@ h1 {
 }
 
 .story-frame {
-    /* width: 54%; */
     padding-left: 150px;
     padding-right: 150px;
 }
@@ -38,6 +37,14 @@ h1 {
 .story-frame img {
     border: 40px solid #191919;
     padding: 0;
+}
+
+.shown {
+    display: block;
+}
+
+.hidden {
+    display: none;
 }
 
 button {
@@ -60,10 +67,6 @@ button {
 #look-right {
     border-top: 0;
     border-left-width: 20px;
-}
-
-.hidden {
-    display: none;
 }
 
 
