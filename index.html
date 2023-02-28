@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wrenwired</title>
     <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <!-- JavaScript -->
     <script src="assets/js/index.js"></script>
@@ -15,27 +16,39 @@
 
 <body>
     <section>
-        <h1>Wrenwired</h1>
+        <div class="container-fluid text-center">
+            <h1>Wrenwired</h1>
+        </div>
         <!-- Story Frame -->
-        <div class="story-frame">
+        <div class="container-fluid story-frame">
             <!-- Story Frame Image -->
-            <div class="story-image">
-                <img id="starting-point-img" src="assets/images/starting-point-ph.jpeg" alt="An empty field" title="An empty barren field with trees in the distance">
-                <img id="look-left-img" class="hidden" src="assets/images/look-left-ph.jpeg" alt="An empty field" title="The field stretches out to the left">
-                <img id="look-right-img" class="hidden" src="assets/images/look-right-ph.jpeg" alt="An empty field" title="The field stretches out to the right">
+            <div class="row story-image">
+                <div class="col"></div>
+                <img id="starting-point-img" class="col-8" src="assets/images/starting-point-ph.jpeg" alt="An empty field" title="An empty barren field with trees in the distance">
+                <img id="look-left-img" class="col-8 hidden" src="assets/images/look-left-ph.jpeg" alt="An empty field" title="The field stretches out to the left">
+                <img id="look-right-img" class="col-8 hidden" src="assets/images/look-right-ph.jpeg" alt="An empty field" title="The field stretches out to the right">
+                <div class="col"></div>
             </div>
             <!-- Turn Buttons -->
-            <div class="turn-buttons">
-                <button type="button" id="look-left" onclick="cycleLeft()">Look left</button>
-                <button type="button" id="look-right" onclick="cycleRight()">Look right</button>
+            <div class="row turn-buttons">
+                <div class="col"></div>
+                <button type="button" id="look-left" class="col-4" onclick="cycleLeft()">Look left</button>
+                <button type="button" id="look-right" class="col-4" onclick="cycleRight()">Look right</button>
+                <div class="col"></div>
             </div>
         </div>
     </section>
 </body>
 
 <footer>
-    <div class="story-frame">
-        <h3>© Matt Granger</h3>
+    <div class="container-fluid story-frame">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-8">
+                <h3>© Matt Granger</h3>
+            </div>
+            <div class="col"></div>
+        </div>
     </div>
 </footer>
 
