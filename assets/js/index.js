@@ -18,15 +18,15 @@ function cycleRight() {
     const compStylesN = window.getComputedStyle(startingPointN);
     const compStylesE = window.getComputedStyle(startingPointE);
     const compStylesS = window.getComputedStyle(startingPointS);
-    if (compStylesN.getPropertyValue('display') === "block") {
+    if (compStylesN.getPropertyValue("display") === "block") {
         startingPointN.style.display = "none";
         startingPointE.style.display = "block";
         console.log("Turned from north to east");
-    } else if (compStylesE.getPropertyValue('display') === "block") {
+    } else if (compStylesE.getPropertyValue("display") === "block") {
         startingPointE.style.display = "none";
         startingPointS.style.display = "block";
         console.log("Turned from east to south");
-    } else if (compStylesS.getPropertyValue('display') === "block") {
+    } else if (compStylesS.getPropertyValue("display") === "block") {
         startingPointS.style.display = "none";
         startingPointW.style.display = "block";
         console.log("Turned from south to west");
@@ -41,15 +41,15 @@ function cycleLeft() {
     const compStylesN = window.getComputedStyle(startingPointN);
     const compStylesW = window.getComputedStyle(startingPointW);
     const compStylesS = window.getComputedStyle(startingPointS);
-    if (compStylesN.getPropertyValue('display') === "block") {
+    if (compStylesN.getPropertyValue("display") === "block") {
         startingPointN.style.display = "none";
         startingPointW.style.display = "block";
         console.log("Turned from north to west");
-    } else if (compStylesW.getPropertyValue('display') === "block") {
+    } else if (compStylesW.getPropertyValue("display") === "block") {
         startingPointW.style.display = "none";
         startingPointS.style.display = "block";
         console.log("Turned from west to south");
-    } else if (compStylesS.getPropertyValue('display') === "block") {
+    } else if (compStylesS.getPropertyValue("display") === "block") {
         startingPointS.style.display = "none";
         startingPointE.style.display = "block";
         console.log("Turned from south to east");
