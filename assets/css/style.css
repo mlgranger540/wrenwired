@@ -59,12 +59,12 @@ button {
     border: 40px solid #191919;
 }
 
-#look-left {
+#turn-left {
     border-top: 0;
     border-right-width: 20px;
 }
 
-#look-right {
+#turn-right {
     border-top: 0;
     border-left-width: 20px;
 }
@@ -102,11 +102,11 @@ footer h3 {
         border-width: 22px;
     }
 
-    #look-left {
+    #turn-left {
         border-right-width: 11px;
     }
 
-    #look-right {
+    #turn-right {
         border-left-width: 11px;
     }
 
@@ -172,11 +172,11 @@ footer h3 {
         border-width: 18px;
     }
 
-    #look-left {
+    #turn-left {
         border-right-width: 9px;
     }
 
-    #look-right {
+    #turn-right {
         border-left-width: 9px;
     }
 }
