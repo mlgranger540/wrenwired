@@ -1,19 +1,33 @@
+/**
+ * Declare variables
+ */ 
 let startingPointN;
 let startingPointE;
 let startingPointS;
 let startingPointW;
+let continueButton1;
+let continueButton2;
+let text1;
+let text2;
 
+/**
+ * Assign variables on page load
+ */
 window.onload = (event) =>{
     startingPointN = document.getElementById("starting-point-n-img");
-    console.log("Loaded starting point N: " + startingPointN);
     startingPointE = document.getElementById("starting-point-e-img");
-    console.log("Loaded starting point E: " + startingPointE);
     startingPointS = document.getElementById("starting-point-s-img");
-    console.log("Loaded starting point S: " + startingPointS);
     startingPointW = document.getElementById("starting-point-w-img");
-    console.log("Loaded starting point W: " + startingPointW);
-}
+    continueButton1 = document.getElementById("continue-1");
+    continueButton2 = document.getElementById("continue-2");
+    text1 = document.getElementById("text-1");
+};
 
+
+/**
+ * Turn button functions
+ * Checks images for a display value of "block" and, if found, changes that image's display to "none" and the next image's display to "block"
+ */
 function cycleRight() {
     const compStylesN = window.getComputedStyle(startingPointN);
     const compStylesE = window.getComputedStyle(startingPointE);
@@ -58,4 +72,32 @@ function cycleLeft() {
         startingPointN.style.display = "block";
         console.log("Turned from east to north");
     }
+}
+
+
+/**
+ * Continue button functions
+ * Changes text of p element in textbox on click, updates the element's ID number, then hides continueButtonN and displays continueButtonN+1
+ */
+function continue1() {
+    text1.innerHTML = "You are in the middle of an empty field. You don't remember how you got there.";
+    text1.id = "text-2";
+    continueButton1.className = "continue hidden";
+    continueButton2.className = "continue shown";
+}
+
+function continue2() {
+    text2 = document.getElementById("text-2");
+    text2.innerHTML = "You don't remember... anything.";
+    text2.id = "text-3";
+    continueButton2.className = "continue hidden";
+}
+
+
+/**
+ * Refresh button reloads page on click
+ */
+
+function refreshPage() {
+    window.location.reload();
 }

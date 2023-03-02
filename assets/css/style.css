@@ -9,16 +9,8 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     color: #D5D5D5;
-    font-size: 80%;
     background: #191919 url(../images/wood-texture-dark.jpeg) top center / 100% no-repeat;
 }
-
-.container-fluid {
-    padding: 0;
-}
-
-
-/* Content */
 
 h1 {
     padding: 66px 0 24px 0;
@@ -29,13 +21,12 @@ h1 {
     text-transform: uppercase;
 }
 
-.story-frame {
-    padding-left: 150px;
-    padding-right: 150px;
+p {
+    margin: 0;
+    font-size: 145%;
 }
 
-.story-frame img {
-    border: 40px solid #191919;
+.container-fluid {
     padding: 0;
 }
 
@@ -47,10 +38,47 @@ h1 {
     display: none;
 }
 
+
+/* Story Frame */
+
+.story-frame {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.story-image {
+    position: relative;
+}
+
+.story-frame img {
+    border: 40px solid #191919;
+    padding: 0;
+}
+
+/* Text box */
+
+.text-box {
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    padding: 2% 3%;
+    background-color: #191919;
+}
+
+.continue {
+    float: right;
+    padding: 0;
+    border: 0;
+    background-color: #191919;
+}
+
+
+/* Turn Buttons */
+
 button {
-    padding: 50px 0;
+    padding: 45px 0;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 270%;
+    font-size: 190%;
     font-weight: 900;
     color: #D5D5D5;
     line-height: 0px;
@@ -67,6 +95,10 @@ button {
 #turn-right {
     border-top: 0;
     border-left-width: 20px;
+}
+
+#refresh-button {
+    border-top: 0;
 }
 
 
@@ -87,6 +119,10 @@ footer h3 {
         font-size: 290%;
     }
 
+    p {
+        font-size: 100%;
+    }
+
     .story-frame {
         padding-left: 200px;
         padding-right: 200px;
@@ -98,7 +134,7 @@ footer h3 {
 
     button {
         padding: 28px 0;
-        font-size: 152%;
+        font-size: 120%;
         border-width: 22px;
     }
 
@@ -136,6 +172,10 @@ footer h3 {
         font-size: 250%;
     }
 
+    p {
+        font-size: 85%;
+    }
+
     .story-frame {
         padding-left: 30px;
         padding-right: 30px;
@@ -143,7 +183,7 @@ footer h3 {
 
     button {
         padding: 26px 0;
-        font-size: 125%;
+        font-size: 95%;
     }
 }
 
@@ -151,6 +191,10 @@ footer h3 {
     .story-frame {
         padding-left: 100px;
         padding-right: 100px;
+    }
+
+    .text-box {
+        left: 12.5%;
     }
 }
 

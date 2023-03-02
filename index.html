@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/22fc12a701.js" crossorigin="anonymous"></script>
     <script src="assets/js/index.js"></script>
 </head>
 
@@ -29,13 +30,25 @@
                 <img id="starting-point-s-img" class="col-12 col-md-8 hidden" src="assets/images/starting-point-s-ph.jpeg" alt="An empty field - south" title="The field stretches out to the south">
                 <img id="starting-point-w-img" class="col-12 col-md-8 hidden" src="assets/images/starting-point-w-ph.jpeg" alt="An empty field - west" title="The field stretches out to the east">
                 <div class="col-md-2"></div>
+                <!-- Text Box -->
+                <div id="text-box" class="col-9 col-md-6 text-box">
+                    <p id="text-1" class="text">You wake up.</p>
+                    <button type="button" id="continue-1" class="continue shown" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-2" class="continue hidden" onclick="continue2()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                </div>
             </div>
             <!-- Turn Buttons -->
-            <div class="row turn-buttons">
+            <div class="row">
                 <div class="col-md-2"></div>
-                <button type="button" id="turn-left" class="col-md-4 col-6" onclick="cycleLeft()">Turn left</button>
-                <button type="button" id="turn-right" class="col-md-4 col-6" onclick="cycleRight()">Turn right</button>
+                <button type="button" id="turn-left" class="col-6 col-md-4" onclick="cycleLeft()">Turn left</button>
+                <button type="button" id="turn-right" class="col-6 col-md-4" onclick="cycleRight()">Turn right</button>
                 <div class="col-md-2"></div>
+            </div>
+            <!-- Refresh Button -->
+            <div class="row">
+                <div class="col-3 col-md-4"></div>
+                <button type="button" id="refresh-button" class="col-6 col-md-4" onclick="refreshPage()">Start over</button>
+                <div class="col-3 col-md-4"></div>
             </div>
         </div>
     </section>
@@ -46,6 +59,7 @@
         <div class="row">
             <div class="col-md-2"></div>
             <div class="col-12 col-md-8">
+                <!-- Copyright -->
                 <h3>© Matt Granger</h3>
             </div>
             <div class="col-md-2"></div>
