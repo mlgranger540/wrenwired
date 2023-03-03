@@ -4,7 +4,7 @@ const storyImgs = {
         right: "turn-right-4",
         src: "assets/images/starting-point-n.png",
         alt: "An empty field - north",
-        title: "The field stretches out to the north",
+        title: "The field stretches out to the north, with a line of trees in the distance",
         next_left: "turn-left-1",
         next_right: "turn-right-1"
     },
@@ -13,7 +13,7 @@ const storyImgs = {
         right: "turn-right-1",
         src: "assets/images/starting-point-e.png",
         alt: "An empty field - east",
-        title: "The field stretches out to the east",
+        title: "The field stretches out to the east, the sun high in the sky",
         next_left: "turn-left-4",
         next_right: "turn-right-2"
     },
@@ -22,7 +22,7 @@ const storyImgs = {
         right: "turn-right-2",
         src: "assets/images/starting-point-s.png",
         alt: "An empty field - south",
-        title: "The field stretches out to the south",
+        title: "The field stretches out to the south, a small plane flying overhead",
         next_left: "turn-left-3",
         next_right: "turn-right-3"
     },
@@ -31,7 +31,7 @@ const storyImgs = {
         right: "turn-right-3",
         src: "assets/images/starting-point-w.png",
         alt: "An empty field - west",
-        title: "The field stretches out to the west",
+        title: "The field stretches out to the west, sky full of clouds",
         next_left: "turn-left-2",
         next_right: "turn-right-4"
     }
