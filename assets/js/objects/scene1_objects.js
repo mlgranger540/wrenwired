@@ -13,7 +13,7 @@ const storyImgs = {
         right: "turn-right-1",
         src: "assets/images/starting-point-e.png",
         alt: "An empty field - east",
-        title: "The field stretches out to the east, the sun high in the sky",
+        title: "The field stretches out to the east, sun high in the sky",
         next_left: "turn-left-4",
         next_right: "turn-right-2"
     },

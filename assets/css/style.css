@@ -78,6 +78,8 @@ p {
 #play-button {
     padding: 25px 50px;
     border: 0;
+    text-transform: uppercase;
+    font-size: 150%;
 }
 
 /* Story Frame */
@@ -174,11 +176,11 @@ footer h3 {
     }
 
     #instruction-box h2 {
-        font-size: 190%;
+        font-size: 180%;
     }
 
     #instruction-box ul {
-        font-size: 140%;
+        font-size: 125%;
     }
 
     .story-frame {
@@ -235,11 +237,16 @@ footer h3 {
     }
 
     #instruction-box h2 {
-        font-size: 150%;
+        font-size: 140%;
     }
 
     #instruction-box ul {
-        font-size: 120%;
+        font-size: 110%;
+    }
+
+    #play-button {
+        padding: 20px 40px;
+        font-size: 130%;
     }
 
     .story-frame {
@@ -301,7 +308,7 @@ footer h3 {
     }
 
     #instruction-box ul {
-        font-size: 100%;
+        font-size: 98%;
     }
 
     .story-frame {
