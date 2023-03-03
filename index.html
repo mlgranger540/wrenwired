@@ -12,7 +12,7 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <!-- JavaScript -->
     <script src="https://kit.fontawesome.com/22fc12a701.js" crossorigin="anonymous"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="assets/js/scene1.js" type="module"></script>
 </head>
 
 <body>
@@ -25,23 +25,20 @@
             <!-- Story Frame Image -->
             <div class="row story-image">
                 <div class="col-md-2"></div>
-                <img id="starting-point-n-img" class="col-12 col-md-8 shown" src="assets/images/starting-point-n-ph.jpeg" alt="An empty field - north" title="An empty barren field with trees in the distance">
-                <img id="starting-point-e-img" class="col-12 col-md-8 hidden" src="assets/images/starting-point-e-ph.jpeg" alt="An empty field - east" title="The field stretches out to the west">
-                <img id="starting-point-s-img" class="col-12 col-md-8 hidden" src="assets/images/starting-point-s-ph.jpeg" alt="An empty field - south" title="The field stretches out to the south">
-                <img id="starting-point-w-img" class="col-12 col-md-8 hidden" src="assets/images/starting-point-w-ph.jpeg" alt="An empty field - west" title="The field stretches out to the east">
+                <img id="starting-point-img" class="col-12 col-md-8" src="assets/images/starting-point-n-ph.jpeg" alt="An empty field - north" title="An empty barren field with trees in the distance">
                 <div class="col-md-2"></div>
                 <!-- Text Box -->
                 <div id="text-box" class="col-9 col-md-6 text-box">
                     <p id="text-1" class="text">You wake up.</p>
-                    <button type="button" id="continue-1" class="continue shown" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
-                    <button type="button" id="continue-2" class="continue hidden" onclick="continue2()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-1" class="continue" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-2" class="continue" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->
             <div class="row">
                 <div class="col-md-2"></div>
-                <button type="button" id="turn-left" class="col-6 col-md-4" onclick="cycleLeft()">Turn left</button>
-                <button type="button" id="turn-right" class="col-6 col-md-4" onclick="cycleRight()">Turn right</button>
+                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-4 turn-left" onclick="cycleLeft(this)">Turn left</button>
+                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-4 turn-right" onclick="cycleRight(this)">Turn right</button>
                 <div class="col-md-2"></div>
             </div>
             <!-- Refresh Button -->
