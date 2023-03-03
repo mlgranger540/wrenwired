@@ -55,6 +55,14 @@ p {
     padding: 0;
 }
 
+#compass {
+    position: absolute;
+    top: 5.5%;
+    right: 13.5%;
+    font-size: 150%;
+    font-weight: 700;
+}
+
 /* Text box */
 
 .text-box {

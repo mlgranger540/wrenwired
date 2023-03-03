@@ -8,6 +8,7 @@ let startingPointN;
 let startingPointE;
 let startingPointS;
 let startingPointW;
+let compass;
 let turnLeft;
 let turnRight;
 let continueButton1;
@@ -24,6 +25,7 @@ window.onload = (event) => {
     startingPointE = storyImgs.startingPointEImg;
     startingPointS = storyImgs.startingPointSImg;
     startingPointW = storyImgs.startingPointWImg;
+    compass = document.getElementById("compass");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
     continueButton1 = document.getElementById("continue-1");
@@ -42,6 +44,7 @@ window.cycleRight = function(element) {
             startingPoint.src = startingPointE.src
             startingPoint.alt = startingPointE.alt
             startingPoint.title = startingPointE.title
+            compass.innerHTML = "<p>E</p>"
             element.id = startingPointE.next_right
             turnLeft.id = startingPointE.next_left
             console.log("Turned from north to east");
@@ -50,6 +53,7 @@ window.cycleRight = function(element) {
             startingPoint.src = startingPointS.src
             startingPoint.alt = startingPointS.alt
             startingPoint.title = startingPointS.title
+            compass.innerHTML = "<p>S</p>"
             element.id = startingPointS.next_right
             turnLeft.id = startingPointS.next_left
             console.log("Turned from east to south");
@@ -58,6 +62,7 @@ window.cycleRight = function(element) {
             startingPoint.src = startingPointW.src
             startingPoint.alt = startingPointW.alt
             startingPoint.title = startingPointW.title
+            compass.innerHTML = "<p>W</p>"
             element.id = startingPointW.next_right
             turnLeft.id = startingPointW.next_left
             console.log("Turned from south to west");
@@ -66,6 +71,7 @@ window.cycleRight = function(element) {
             startingPoint.src = startingPointN.src
             startingPoint.alt = startingPointN.alt
             startingPoint.title = startingPointN.title
+            compass.innerHTML = "<p>N</p>"
             element.id = startingPointN.next_right
             turnLeft.id = startingPointN.next_left
             console.log("Turned from west to north");
@@ -79,6 +85,7 @@ window.cycleLeft = function(element) {
             startingPoint.src = startingPointW.src
             startingPoint.alt = startingPointW.alt
             startingPoint.title = startingPointW.title
+            compass.innerHTML = "<p>W</p>"
             element.id = startingPointW.next_left
             turnRight.id = startingPointW.next_right
             console.log("Turned from north to west");
@@ -87,6 +94,7 @@ window.cycleLeft = function(element) {
             startingPoint.src = startingPointS.src
             startingPoint.alt = startingPointS.alt
             startingPoint.title = startingPointS.title
+            compass.innerHTML = "<p>S</p>"
             element.id = startingPointS.next_left
             turnRight.id = startingPointS.next_right
             console.log("Turned from west to south");
@@ -95,6 +103,7 @@ window.cycleLeft = function(element) {
             startingPoint.src = startingPointE.src
             startingPoint.alt = startingPointE.alt
             startingPoint.title = startingPointE.title
+            compass.innerHTML = "<p>E</p>"
             element.id = startingPointE.next_left
             turnRight.id = startingPointE.next_right
             console.log("Turned from south to east");
@@ -103,6 +112,7 @@ window.cycleLeft = function(element) {
             startingPoint.src = startingPointN.src
             startingPoint.alt = startingPointN.alt
             startingPoint.title = startingPointN.title
+            compass.innerHTML = "<p>N</p>"
             element.id = startingPointN.next_left
             turnRight.id = startingPointN.next_right
             console.log("Turned from east to north");
