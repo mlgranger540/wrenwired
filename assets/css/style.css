@@ -39,6 +39,46 @@ p {
 }
 
 
+/* Instructions Modal */
+
+#modal {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#modal-row {
+    width: 100%;
+    height: 100%;
+}
+
+#instruction-box {
+    padding: 0 5%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #0a0a0a;
+}
+
+#instruction-box h2 {
+    padding-top: 4%;
+    font-size: 300%;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+#instruction-box ul {
+    padding-top: 2%;
+    font-size: 200%;
+    list-style-type: square;
+}
+
+#play-button {
+    padding: 25px 50px;
+    border: 0;
+}
+
 /* Story Frame */
 
 .story-frame {
@@ -131,6 +171,14 @@ footer h3 {
         font-size: 100%;
     }
 
+    #instruction-box h2 {
+        font-size: 190%;
+    }
+
+    #instruction-box ul {
+        font-size: 140%;
+    }
+
     .story-frame {
         padding-left: 200px;
         padding-right: 200px;
@@ -184,6 +232,14 @@ footer h3 {
         font-size: 85%;
     }
 
+    #instruction-box h2 {
+        font-size: 150%;
+    }
+
+    #instruction-box ul {
+        font-size: 120%;
+    }
+
     .story-frame {
         padding-left: 30px;
         padding-right: 30px;
@@ -232,6 +288,18 @@ footer h3 {
 @media screen and (max-width: 426px){
     h1 {
         padding: 50px 0 10px 0;
+    }
+
+    #modal-row {
+        margin: 0;
+    }
+
+    #instruction-box h2 {
+        font-size: 130%;
+    }
+
+    #instruction-box ul {
+        font-size: 100%;
     }
 
     .story-frame {

@@ -3,6 +3,10 @@ import {storyImgs} from "./objects/scene1_objects.js";
 /**
  * Declare variables
  */
+let modal;
+let instructions;
+let storyFrame;
+let footer;
 let startingPoint;
 let startingPointN;
 let startingPointE;
@@ -20,6 +24,10 @@ let text2;
  * Assign variables on page load
  */
 window.onload = (event) => {
+    modal = document.getElementById("modal");
+    instructions = document.getElementById("instructions-box");
+    storyFrame = document.getElementById("story-frame-1");
+    footer = document.getElementsByTagName("footer")[0];
     startingPoint = document.getElementById("starting-point-img");
     startingPointN = storyImgs.startingPointNImg;
     startingPointE = storyImgs.startingPointEImg;
@@ -33,6 +41,16 @@ window.onload = (event) => {
     text1 = document.getElementById("text-1");
 };
 
+
+/**
+ * Modal play button
+ */
+window.play = function() {
+    storyFrame.hidden = false;
+    footer.hidden = false;
+    modal.hidden = true;
+    instructions.hidden = true;
+}
 
 /**
  * Turn button functions
