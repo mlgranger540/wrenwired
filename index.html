@@ -20,8 +20,8 @@
         <!-- Instructions Modal -->
         <div id="modal" class="container-fluid">
             <div id="modal-row" class="row story-frame">
-                <div class="col-md-2"></div>
-                <div id="instruction-box" class="col-12 col-md-8">
+                <div class="col-md-3"></div>
+                <div id="instruction-box" class="col-12 col-md-6">
                     <div class="container-fluid text-center">
                         <h1>Wrenwired</h1>
                     </div>
@@ -31,7 +31,7 @@
                         <li>Keep track of your direction with the compass indicator in the top right</li>
                         <li>Click through the text to expand the story</li>
                         <li>Find your way to the next scene by searching for clickable areas of interest in the pictures</li>
-                        <li>Hover over the images for clues</li>
+                        <li>Hover over the images for clues (unless you're on mobile, sorry!)</li>
                         <li>Collect memories as you go to piece together what happened to you</li>
                         <li>Feel free to start over if you ever get stuck (but there will always be a way through!)</li>
                         <li>Have fun :D</li>
@@ -41,7 +41,7 @@
                         <button type="button" id="play-button" onclick="play()">Play</button>
                     </div>
                 </div>
-            <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
             </div>
         </div>
     </section>
@@ -49,30 +49,38 @@
         <div class="container-fluid text-center">
             <h1>Wrenwired</h1>
         </div>
+        <!-- Log -->
+        <div id="log" class="col-md-3 panel">
+            <h3>Log</h3>
+            <ul id="log-list">
+                <li>You woke up.</li>
+            </ul>
+            <button type="button" id="open-log" class="arrow-button" onclick="openLog()"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
         <!-- Story Frame -->
         <div class="container-fluid story-frame">
-            <!-- Story Frame Image -->
             <div class="row story-image">
-                <div class="col-md-2"></div>
-                <img id="starting-point-img" class="col-12 col-md-8" src="assets/images/starting-point-n.png" alt="An empty field - north" title="An empty barren field with a line of trees in the distance">
-                <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
+                <!-- Story Frame Image -->
+                <img id="starting-point-img" class="col-12 col-md-6" src="assets/images/starting-point-n.png" alt="An empty field - north" title="An empty barren field with a line of trees in the distance">
+                <div class="col-md-3"></div>
                 <!-- Compass Indicator -->
                 <div id="compass" class="col-1">
                     <p>N</p>
                 </div>
                 <!-- Text Box -->
-                <div id="text-box" class="col-9 col-md-6 text-box">
+                <div id="text-box" class="col-9 col-md-5 text-box">
                     <p id="text-1" class="text">You wake up.</p>
-                    <button type="button" id="continue-1" class="continue" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
-                    <button type="button" id="continue-2" class="continue" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-2" class="arrow-button" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->
             <div class="row">
-                <div class="col-md-2"></div>
-                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-4 turn-left" onclick="cycleLeft(this)">Turn left</button>
-                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-4 turn-right" onclick="cycleRight(this)">Turn right</button>
-                <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
+                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-3 turn-left" onclick="cycleLeft(this)">Turn left</button>
+                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)">Turn right</button>
+                <div class="col-md-3"></div>
             </div>
             <!-- Refresh Button -->
             <div class="row">
@@ -87,12 +95,12 @@
 <footer hidden>
     <div class="container-fluid story-frame">
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-12 col-md-8">
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-6">
                 <!-- Copyright -->
                 <h3>© Matt Granger</h3>
             </div>
-            <div class="col-md-2"></div>
+            <div class="col-md-3"></div>
         </div>
     </div>
 </footer>

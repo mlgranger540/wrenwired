@@ -4,7 +4,8 @@ import {storyImgs} from "./objects/scene1_objects.js";
  * Declare variables
  */
 let modal;
-let instructions;
+let log;
+let logList;
 let storyFrame;
 let footer;
 let startingPoint;
@@ -25,7 +26,8 @@ let text2;
  */
 window.onload = (event) => {
     modal = document.getElementById("modal");
-    instructions = document.getElementById("instructions-box");
+    log = document.getElementsByClassName("panel")[0];
+    logList = document.getElementById("log-list");
     storyFrame = document.getElementById("story-frame-1");
     footer = document.getElementsByTagName("footer")[0];
     startingPoint = document.getElementById("starting-point-img");
@@ -49,7 +51,18 @@ window.play = function() {
     storyFrame.hidden = false;
     footer.hidden = false;
     modal.hidden = true;
-    instructions.hidden = true;
+}
+
+/**
+ * Open log side panel
+ * Toggles panel open and closed by moving in from left edge
+ */
+window.openLog = function() {
+    if (log.style.left !== "0%" ) {
+        log.style.left = "0%";
+    } else {
+        log.style.left = "-22%";
+    }
 }
 
 /**
@@ -65,7 +78,10 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>E</p>"
             element.id = startingPointE.next_right
             turnLeft.id = startingPointE.next_left
-            console.log("Turned from north to east");
+            console.log("Turn north to east");
+            let logTurnNtoE = document.createElement("li");
+            logTurnNtoE.innerHTML = "You turned from north to east.";
+            logList.appendChild(logTurnNtoE);
             break;
         case "turn-right-2":
             startingPoint.src = startingPointS.src
@@ -74,7 +90,10 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>S</p>"
             element.id = startingPointS.next_right
             turnLeft.id = startingPointS.next_left
-            console.log("Turned from east to south");
+            console.log("Turn east to south");
+            let logTurnEtoS = document.createElement("li");
+            logTurnEtoS.innerHTML = "You turned from east to south.";
+            logList.appendChild(logTurnEtoS);
             break;
         case "turn-right-3":
             startingPoint.src = startingPointW.src
@@ -83,7 +102,10 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>W</p>"
             element.id = startingPointW.next_right
             turnLeft.id = startingPointW.next_left
-            console.log("Turned from south to west");
+            console.log("Turn south to west");
+            let logTurnStoW = document.createElement("li");
+            logTurnStoW.innerHTML = "You turned from south to west.";
+            logList.appendChild(logTurnStoW);
             break;
         case "turn-right-4":
             startingPoint.src = startingPointN.src
@@ -92,7 +114,10 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>N</p>"
             element.id = startingPointN.next_right
             turnLeft.id = startingPointN.next_left
-            console.log("Turned from west to north");
+            console.log("Turn west to north");
+            let logTurnWtoN = document.createElement("li");
+            logTurnWtoN.innerHTML = "You turned from west to north.";
+            logList.appendChild(logTurnWtoN);
             break;
     }
 }
@@ -106,7 +131,10 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>W</p>"
             element.id = startingPointW.next_left
             turnRight.id = startingPointW.next_right
-            console.log("Turned from north to west");
+            console.log("Turn north to west");
+            let logTurnNtoW = document.createElement("li");
+            logTurnNtoW.innerHTML = "You turned from north to west.";
+            logList.appendChild(logTurnNtoW);
             break;
         case "turn-left-2":
             startingPoint.src = startingPointS.src
@@ -115,7 +143,10 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>S</p>"
             element.id = startingPointS.next_left
             turnRight.id = startingPointS.next_right
-            console.log("Turned from west to south");
+            console.log("Turn west to south");
+            let logTurnWtoS = document.createElement("li");
+            logTurnWtoS.innerHTML = "You turned from west to south.";
+            logList.appendChild(logTurnWtoS);
             break;
         case "turn-left-3":
             startingPoint.src = startingPointE.src
@@ -124,7 +155,10 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>E</p>"
             element.id = startingPointE.next_left
             turnRight.id = startingPointE.next_right
-            console.log("Turned from south to east");
+            console.log("Turn south to east");
+            let logTurnStoE = document.createElement("li");
+            logTurnStoE.innerHTML = "You turned from south to east.";
+            logList.appendChild(logTurnStoE);
             break;
         case "turn-left-4":
             startingPoint.src = startingPointN.src
@@ -133,7 +167,10 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>N</p>"
             element.id = startingPointN.next_left
             turnRight.id = startingPointN.next_right
-            console.log("Turned from east to north");
+            console.log("Turn east to north");
+            let logTurnEtoN = document.createElement("li");
+            logTurnEtoN.innerHTML = "You turned from east to north.";
+            logList.appendChild(logTurnEtoN);
             break;
     }
 }
