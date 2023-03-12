@@ -3,6 +3,7 @@ import {storyImgs} from "./objects/scene1_objects.js";
 /**
  * Declare variables
  */
+let viewportWidth;
 let modal;
 let log;
 let logList;
@@ -25,6 +26,7 @@ let text2;
  * Assign variables on page load
  */
 window.onload = (event) => {
+    viewportWidth = window.innerWidth;
     modal = document.getElementById("modal");
     log = document.getElementsByClassName("panel")[0];
     logList = document.getElementById("log-list");
@@ -55,13 +57,25 @@ window.play = function() {
 
 /**
  * Open log side panel
- * Toggles panel open and closed by moving in from left edge
+ * Toggles panel open and closed by toggling hidden property between true and false
+ * Arrow direction of button changes and button is moved to stick to right edge of panel (varies by viewport width)
  */
 window.openLog = function() {
-    if (log.style.left !== "0%" ) {
-        log.style.left = "0%";
+    let openLogButton = document.getElementById("open-log");
+    if (log.hidden === true ) {
+        log.hidden = false;
+        openLogButton.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+        if (viewportWidth < 427) {
+            openLogButton.style.left = "91%";
+        } else if (viewportWidth < 768) {
+            openLogButton.style.left = "44%";
+        } else {
+            openLogButton.style.left = "22%";
+        }
     } else {
-        log.style.left = "-22%";
+        log.hidden = true;
+        openLogButton.style.left = "0%";
+        openLogButton.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
     }
 }
 

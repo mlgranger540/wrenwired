@@ -10,6 +10,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: #dcdcdc;
     background: #191919 url(../images/wood-texture-dark.jpeg) top center / 100% no-repeat;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -88,19 +89,19 @@ p {
 .panel {
     position: absolute;
     top: 0;
-    left: -22%;
+    left: 0;
     height: 100%;
     padding: 4% 3%;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
     background-color: #0a0a0a;
-    z-index: 1;
+    z-index: 2;
 }
 
 .panel::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .panel h3 {
     padding-bottom: 3%;
@@ -112,7 +113,20 @@ p {
 }
 
 #log {
-    margin-right: 20%;
+    width: fit-content;
+    height: 100%;
+}
+
+#open-log {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: fit-content;
+    height: 100%;
+    padding: 1%;
+    border: 0;
+    background-color: #0a0a0a;
+    z-index: 2;
 }
 
 
@@ -156,7 +170,6 @@ p {
 }
 
 .arrow-button {
-    /* float: right; */
     position: absolute;
     right: 5%;
     top: 50%;
@@ -259,9 +272,13 @@ footer h3 {
         padding: 40px 0 6px 0;
     }
 
+    #compass {
+        right: 21%;
+    }
+
     .story-frame {
-        padding-left: 50px;
-        padding-right: 50px;
+        /* padding-left: 50px;
+        padding-right: 50px; */
     }
 }
 
@@ -279,11 +296,11 @@ footer h3 {
     }
 
     #instruction-box h2 {
-        font-size: 140%;
+        font-size: 130%;
     }
 
     #instruction-box ul {
-        font-size: 110%;
+        font-size: 100%;
     }
 
     #play-button {
@@ -291,9 +308,17 @@ footer h3 {
         font-size: 130%;
     }
 
+    .panel h3 {
+        font-size: 140%;
+    }
+
+    .panel li {
+        font-size: 90%;
+    }
+
     .story-frame {
-        padding-left: 30px;
-        padding-right: 30px;
+        /* padding-left: 30px;
+        padding-right: 30px; */
     }
 
     .story-frame img {
@@ -301,8 +326,11 @@ footer h3 {
     }
 
     #compass {
-        top: 6%;
-        right: 14%;
+        right: 21.5%;
+    }
+
+    .text-box {
+        padding: 2.5% 3%;
     }
 
     button {
@@ -321,6 +349,10 @@ footer h3 {
 }
 
 @media screen and (max-width: 768px){
+    #open-log {
+        padding: 2%;
+    }
+
     .story-frame {
         padding-left: 100px;
         padding-right: 100px;
@@ -333,6 +365,7 @@ footer h3 {
 
     .text-box {
         left: 12.5%;
+        padding: 4% 3%;
     }
 }
 
@@ -346,11 +379,11 @@ footer h3 {
     }
 
     #instruction-box h2 {
-        font-size: 125%;
+        font-size: 120%;
     }
 
     #instruction-box ul {
-        font-size: 95%;
+        font-size: 90%;
     }
 
     .story-frame {

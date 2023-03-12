@@ -30,6 +30,7 @@
                         <li>Turn left and right to explore your surroundings</li>
                         <li>Keep track of your direction with the compass indicator in the top right</li>
                         <li>Click through the text to expand the story</li>
+                        <li>Track your progress with the log panel on the left</li>
                         <li>Find your way to the next scene by searching for clickable areas of interest in the pictures</li>
                         <li>Hover over the images for clues (unless you're on mobile, sorry!)</li>
                         <li>Collect memories as you go to piece together what happened to you</li>
@@ -50,12 +51,18 @@
             <h1>Wrenwired</h1>
         </div>
         <!-- Log -->
-        <div id="log" class="col-md-3 panel">
-            <h3>Log</h3>
-            <ul id="log-list">
-                <li>You woke up.</li>
-            </ul>
-            <button type="button" id="open-log" class="arrow-button" onclick="openLog()"><i class="fa-solid fa-chevron-right"></i></button>
+        <div id="log">
+            <div class="col-12 col-sm-6 col-md-3 panel" hidden>
+                <h3>Log</h3>
+                <div class="list">
+                    <ul id="log-list">
+                        <li>You woke up.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-1">
+                <button type="button" id="open-log" onclick="openLog()"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
         </div>
         <!-- Story Frame -->
         <div class="container-fluid story-frame">
