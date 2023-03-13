@@ -224,7 +224,7 @@ window.continue3 = function() {
  */
 window.moveToScene2 = function() {
     console.log("You found the way forward!");
-    window.location.href = "../../page2.html";
+    window.location.href = "page2.html";
 }
 
 
