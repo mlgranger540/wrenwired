@@ -159,6 +159,18 @@ p {
     color: #b0b0b0;
 }
 
+.click-me {
+    border: 0;
+    background-color: rgba(0,0,0,0);
+}
+
+#tree-line {
+    position: absolute;
+    top: 50.5%;
+    left: 29.2%;
+    padding: 0.8%;
+}
+
 /* Text box */
 
 .text-box {

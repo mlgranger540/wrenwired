@@ -16,37 +16,7 @@
 </head>
 
 <body>
-    <section>
-        <!-- Instructions Modal -->
-        <div id="modal" class="container-fluid">
-            <div id="modal-row" class="row story-frame">
-                <div class="col-md-3"></div>
-                <div id="instruction-box" class="col-12 col-md-6">
-                    <div class="container-fluid text-center">
-                        <h1>Wrenwired</h1>
-                    </div>
-                    <h2>Instructions</h2>
-                    <ul>
-                        <li>Turn left and right to explore your surroundings</li>
-                        <li>Keep track of your direction with the compass indicator in the top right</li>
-                        <li>Click through the text to expand the story</li>
-                        <li>Track your progress with the log panel on the left</li>
-                        <li>Find your way to the next scene by searching for clickable areas of interest in the pictures</li>
-                        <li>Hover over the images for clues (unless you're on mobile, sorry!)</li>
-                        <li>Collect memories as you go to piece together what happened to you</li>
-                        <li>Feel free to start over if you ever get stuck (but there will always be a way through!)</li>
-                        <li>Have fun :D</li>
-                    </ul>
-                    <!-- Play Button -->
-                    <div class="text-center">
-                        <button type="button" id="play-button" onclick="play()">Play</button>
-                    </div>
-                </div>
-                <div class="col-md-3"></div>
-            </div>
-        </div>
-    </section>
-    <section id="story-frame-1" hidden>
+    <section id="story-frame-2">
         <div class="container-fluid text-center">
             <h1>Wrenwired</h1>
         </div>
@@ -56,7 +26,7 @@
                 <h3>Log</h3>
                 <div class="list">
                     <ul id="log-list">
-                        <li>You woke up.</li>
+                        <li>You reach the edge of the forest.</li>
                     </ul>
                 </div>
             </div>
@@ -70,20 +40,19 @@
             <div class="row story-image">
                 <div class="col-md-3"></div>
                 <!-- Story Frame Image -->
-                <img id="starting-point-img" class="col-12 col-md-6" src="assets/images/starting-point-n.png" alt="An empty field - north" title="An empty barren field with a line of trees in the distance">
+                <img id="forest-edge-img" class="col-12 col-md-6" src="assets/images/forest-edge-n.png" alt="The edge of a forest - north" title="The edge of a forest">
                 <div class="col-md-3"></div>
                 <!-- Compass Indicator -->
                 <div id="compass" class="col-1">
                     <p>N</p>
                 </div>
                 <!-- Click Area -->
-                <button type="button" id="tree-line" class="col-9 col-md-5 click-me" title="A line of trees in the distance" onclick="moveToScene2()"></button>
+                <button type="button" id="tree-line" class="col-9 col-md-5 click-me" title="A line of trees in the distance" onclick="moveChar()"></button>
                 <!-- Text Box -->
                 <div id="text-box" class="col-9 col-md-5 text-box">
-                    <p id="text-1" class="text">You wake up.</p>
+                    <p id="text-1" class="text">You reach the edge of the forest.</p>
                     <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                     <button type="button" id="continue-2" class="arrow-button" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
-                    <button type="button" id="continue-3" class="arrow-button" onclick="continue3()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->

@@ -19,8 +19,8 @@ let turnLeft;
 let turnRight;
 let continueButton1;
 let continueButton2;
+let continueButton3;
 let text1;
-let text2;
 
 /**
  * Assign variables on page load
@@ -42,6 +42,7 @@ window.onload = (event) => {
     turnRight = document.getElementsByName("turn-right")[0];
     continueButton1 = document.getElementById("continue-1");
     continueButton2 = document.getElementById("continue-2");
+    continueButton3 = document.getElementById("continue-3");
     text1 = document.getElementById("text-1");
 };
 
@@ -199,15 +200,31 @@ window.continue1 = function() {
     text1.id = "text-2";
     continueButton1.hidden = true;
     continueButton2.hidden = false;
-    console.log("Continued");
 }
 
 window.continue2 = function() {
-    text2 = document.getElementById("text-2");
+    let text2 = document.getElementById("text-2");
     text2.innerHTML = "You don't remember... anything.";
     text2.id = "text-3";
     continueButton2.hidden = true;
-    console.log("Continued");
+    continueButton3.hidden = false;
+}
+
+window.continue3 = function() {
+    let text3 = document.getElementById("text-3");
+    let continueButton3 = document.getElementById("continue-3");
+    text3.innerHTML = "Actually... after a second, you do remember one thing. Your name.";
+    text3.id = "text-4";
+    continueButton3.hidden = true;
+}
+
+
+/**
+ * Invisible buttons to progress to the next page
+ */
+window.moveToScene2 = function() {
+    console.log("You found the way forward!");
+    window.location.href = "../../page2.html";
 }
 
 
