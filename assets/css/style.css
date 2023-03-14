@@ -132,11 +132,6 @@ p {
 
 /* Story Frame */
 
-.story-frame {
-    /* padding-left: 150px;
-    padding-right: 150px; */
-}
-
 .story-image {
     position: relative;
 }
@@ -156,7 +151,14 @@ p {
     right: 20.5%;
     font-size: 150%;
     font-weight: 700;
+}
+
+.compass {
     color: #b0b0b0;
+}
+
+.page-2-compass {
+    color: #fff;
 }
 
 .click-me {
@@ -169,6 +171,20 @@ p {
     top: 50.5%;
     left: 29.2%;
     padding: 0.8%;
+}
+
+#river-1 {
+    position: absolute;
+    top: 35%;
+    left: 47%;
+    padding: 1.1%;
+}
+
+#river-2 {
+    position: absolute;
+    top: 41%;
+    left: 28%;
+    padding: 1.1%;
 }
 
 /* Text box */
@@ -250,11 +266,6 @@ footer h3 {
         font-size: 125%;
     }
 
-    .story-frame {
-        /* padding-left: 200px;
-        padding-right: 200px; */
-    }
-
     .story-frame img {
         border-width: 22px;
     }
@@ -286,11 +297,6 @@ footer h3 {
 
     #compass {
         right: 21%;
-    }
-
-    .story-frame {
-        /* padding-left: 50px;
-        padding-right: 50px; */
     }
 }
 
@@ -326,11 +332,6 @@ footer h3 {
 
     .panel li {
         font-size: 90%;
-    }
-
-    .story-frame {
-        /* padding-left: 30px;
-        padding-right: 30px; */
     }
 
     .story-frame img {
@@ -373,6 +374,21 @@ footer h3 {
     #compass {
         top: 6.5%;
         right: 1.5%;
+    }
+
+    #tree-line {
+        left: 12.5%;
+        padding: 2%;
+    }
+
+    #river-1 {
+        left: 42%;
+        padding: 2.4%;
+    }
+
+    #river-2 {
+        left: 5.8%;
+        padding: 2.4%;
     }
 
     .text-box {
