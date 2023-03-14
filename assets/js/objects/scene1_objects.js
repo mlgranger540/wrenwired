@@ -1,5 +1,5 @@
 const storyImgs = {
-    startingPointNImg: {
+    northImg: {
         left: "turn-left-4",
         right: "turn-right-4",
         src: "assets/images/starting-point-n.png",
@@ -8,7 +8,7 @@ const storyImgs = {
         next_left: "turn-left-1",
         next_right: "turn-right-1"
     },
-    startingPointEImg: {
+    eastImg: {
         left: "turn-left-3",
         right: "turn-right-1",
         src: "assets/images/starting-point-e.png",
@@ -17,7 +17,7 @@ const storyImgs = {
         next_left: "turn-left-4",
         next_right: "turn-right-2"
     },
-    startingPointSImg: {
+    southImg: {
         left: "turn-left-2",
         right: "turn-right-2",
         src: "assets/images/starting-point-s.png",
@@ -26,7 +26,7 @@ const storyImgs = {
         next_left: "turn-left-3",
         next_right: "turn-right-3"
     },
-    startingPointWImg: {
+    westImg: {
         left: "turn-left-1",
         right: "turn-right-3",
         src: "assets/images/starting-point-w.png",
