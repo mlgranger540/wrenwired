@@ -162,29 +162,39 @@ p {
 }
 
 .click-me {
+    position: absolute;
     border: 0;
     background-color: rgba(0,0,0,0);
 }
 
 #tree-line {
-    position: absolute;
     top: 50.5%;
     left: 29.2%;
     padding: 0.8%;
 }
 
 #river-1 {
-    position: absolute;
     top: 35%;
     left: 47%;
     padding: 1.1%;
 }
 
 #river-2 {
-    position: absolute;
     top: 41%;
     left: 28%;
     padding: 1.1%;
+}
+
+#path-1 {
+    top: 58%;
+    left: 26.5%;
+    padding: 1.6%;
+}
+
+#path-2 {
+    top: 67%;
+    left: 36%;
+    padding: 1.6%;
 }
 
 /* Text box */

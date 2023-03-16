@@ -17,6 +17,8 @@ let westImg;
 let compass;
 let river1;
 let river2;
+let path1;
+let path2;
 let turnLeft;
 let turnRight;
 let continueButton1;
@@ -42,6 +44,8 @@ window.onload = (event) => {
     compass = document.getElementById("compass");
     river1 = document.getElementById("river-1");
     river2 = document.getElementById("river-2");
+    path1 = document.getElementById("path-1");
+    path2 = document.getElementById("path-2");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
     continueButton1 = document.getElementById("continue-1");
@@ -97,6 +101,8 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>E</p>";
             river1.hidden = true;
             river2.hidden = true;
+            path1.hidden = false;
+            path2.hidden = false;
             element.id = eastImg.next_right;
             turnLeft.id = eastImg.next_left;
             console.log("Turn north to east");
@@ -111,6 +117,8 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>S</p>";
             river1.hidden = true;
             river2.hidden = true;
+            path1.hidden = true;
+            path2.hidden = true;
             element.id = southImg.next_right;
             turnLeft.id = southImg.next_left;
             console.log("Turn east to south");
@@ -125,6 +133,8 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>W</p>";
             river1.hidden = false;
             river2.hidden = false;
+            path1.hidden = true;
+            path2.hidden = true;
             element.id = westImg.next_right;
             turnLeft.id = westImg.next_left;
             console.log("Turn south to west");
@@ -139,6 +149,8 @@ window.cycleRight = function(element) {
             compass.innerHTML = "<p>N</p>";
             river1.hidden = true;
             river2.hidden = true;
+            path1.hidden = true;
+            path2.hidden = true;
             element.id = northImg.next_right;
             turnLeft.id = northImg.next_left;
             console.log("Turn west to north");
@@ -158,6 +170,8 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>W</p>";
             river1.hidden = false;
             river2.hidden = false;
+            path1.hidden = true;
+            path2.hidden = true;
             element.id = westImg.next_left;
             turnRight.id = westImg.next_right;
             console.log("Turn north to west");
@@ -172,6 +186,8 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>S</p>";
             river1.hidden = true;
             river2.hidden = true;
+            path1.hidden = true;
+            path2.hidden = true;
             element.id = southImg.next_left;
             turnRight.id = southImg.next_right;
             console.log("Turn west to south");
@@ -186,6 +202,8 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>E</p>";
             river1.hidden = true;
             river2.hidden = true;
+            path1.hidden = false;
+            path2.hidden = false;
             element.id = eastImg.next_left;
             turnRight.id = eastImg.next_right;
             console.log("Turn south to east");
@@ -200,6 +218,8 @@ window.cycleLeft = function(element) {
             compass.innerHTML = "<p>N</p>";
             river1.hidden = true;
             river2.hidden = true;
+            path1.hidden = true;
+            path2.hidden = true;
             element.id = northImg.next_left;
             turnRight.id = northImg.next_right;
             console.log("Turn east to north");
@@ -246,9 +266,17 @@ window.continue3 = function() {
 window.moveChar1 = function() {
     console.log("You found the way forward!");
     let logMoveChar1 = document.createElement("li");
-    logMoveChar1.innerHTML = "You moved onward.";
+    logMoveChar1.innerHTML = "You moved onward to the west.";
     logList.appendChild(logMoveChar1);
-    window.location.replace("page3.html");
+    window.location.replace("page3_west_path.html");
+}
+
+window.moveChar2 = function() {
+    console.log("You found the way forward!");
+    let logMoveChar2 = document.createElement("li");
+    logMoveChar2.innerHTML = "You moved onward to the east.";
+    logList.appendChild(logMoveChar2);
+    window.location.replace("page3_east_path.html");
 }
 
 

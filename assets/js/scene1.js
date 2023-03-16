@@ -230,19 +230,20 @@ window.continue3 = function() {
 
 
 /**
- * Invisible buttons to progress to the next page
+ * Click areas
+ * Invisible buttons to progress to the next scene
  */
 window.moveChar1 = function() {
     console.log("You found the way forward!");
     let logMoveChar1 = document.createElement("li");
-    logMoveChar1.innerHTML = "You moved onward.";
+    logMoveChar1.innerHTML = "You moved onward to the north.";
     logList.appendChild(logMoveChar1);
     window.location.replace("page2.html");
 }
 
 
 /**
- * Refresh button reloads page on click
+ * Refresh button reloads game on click
  */
 window.refreshPage = function() {
     window.location.replace("index.html");
