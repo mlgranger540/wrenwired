@@ -54,10 +54,8 @@
         <div id="log">
             <div class="col-12 col-sm-6 col-md-3 panel" hidden>
                 <h3>Log</h3>
-                <div class="list">
-                    <ul id="log-list">
-                        <li>You woke up.</li>
-                    </ul>
+                <div id="log-list" class="list">
+                    <p><em>[Click something to start your journey.]</em></p>
                 </div>
             </div>
             <!-- Open/Close Log Button -->
@@ -93,10 +91,10 @@
                 <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)">Turn right</button>
                 <div class="col-md-3"></div>
             </div>
-            <!-- Refresh Button -->
+            <!-- Reload Button -->
             <div class="row">
                 <div class="col-3 col-md-4"></div>
-                <button type="button" id="refresh-button" class="col-6 col-md-4" onclick="refreshPage()">Start over</button>
+                <button type="button" id="reload-button" class="col-6 col-md-4" onclick="reloadGame()">Start over</button>
                 <div class="col-3 col-md-4"></div>
             </div>
         </div>
