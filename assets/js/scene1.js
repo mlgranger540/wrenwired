@@ -5,7 +5,7 @@ import {addToSessionStorage, clearSessionStorage, updateLogOnPage} from "./log_s
  * Declare variables
  */
 let viewportWidth;
-let modal;
+let instructionsModal;
 let log;
 let storyFrame;
 let footer;
@@ -21,14 +21,17 @@ let turnRight;
 let continueButton1;
 let continueButton2;
 let continueButton3;
+let continueButton4;
 let text1;
+let nameModal;
+let nameInput;
 
 /**
  * Assign variables on page load
  */
 window.onload = (event) => {
     viewportWidth = window.innerWidth;
-    modal = document.getElementById("modal");
+    instructionsModal = document.getElementById("instructions-modal");
     log = document.getElementsByClassName("panel")[0];
     storyFrame = document.getElementById("story-frame-1");
     footer = document.getElementsByTagName("footer")[0];
@@ -44,7 +47,10 @@ window.onload = (event) => {
     continueButton1 = document.getElementById("continue-1");
     continueButton2 = document.getElementById("continue-2");
     continueButton3 = document.getElementById("continue-3");
+    continueButton4 = document.getElementById("continue-4");
     text1 = document.getElementById("text-1");
+    nameModal = document.getElementById("name-modal");
+    nameInput = document.getElementById("name-input");
     updateLogOnPage();
 };
 
@@ -55,7 +61,7 @@ window.onload = (event) => {
 window.play = function() {
     storyFrame.hidden = false;
     footer.hidden = false;
-    modal.hidden = true;
+    instructionsModal.hidden = true;
 }
 
 /**
@@ -211,6 +217,37 @@ window.continue3 = function() {
     text3.innerHTML = "Actually... after a second, you do remember one thing. Your name.";
     text3.id = "text-4";
     continueButton3.hidden = true;
+    continueButton4.hidden = false;
+}
+
+window.continue4 = function() {
+    nameModal.hidden = false;
+}
+
+window.submitName = function() {
+    const regex = new RegExp(/^[a-zA-Z]+$/,'gi');
+    let name = nameInput.value;
+    console.log(name);
+    let regexTest = regex.test(name);
+    console.log(regexTest);
+    if (name === "") {
+        nameInput.setCustomValidity("Please submit a name");
+        console.log("Please submit a name");
+    } else if (regexTest) {
+        console.log("Passed");
+        console.log(`Hello ${name}`);
+        nameModal.hidden = true;
+        continueButton4.hidden = true;
+        let text4 = document.getElementById("text-4");
+        text4.innerHTML = `${name}. Your name is ${name}.`;
+        text4.id = "text-5";
+    } else {
+        console.log("Failed");
+        nameInput.setCustomValidity("Your name may only contain the characters a-z");
+        nameInput.reportValidity();
+        nameInput.value = "";
+        console.log("Please submit a name");
+    }
 }
 
 

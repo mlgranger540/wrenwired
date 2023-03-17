@@ -18,8 +18,8 @@
 <body>
     <section>
         <!-- Instructions Modal -->
-        <div id="modal" class="container-fluid">
-            <div id="modal-row" class="row story-frame">
+        <div id="instructions-modal" class="container-fluid modal">
+            <div class="row modal-row story-frame">
                 <div class="col-md-3"></div>
                 <div id="instruction-box" class="col-12 col-md-6">
                     <div class="container-fluid text-center">
@@ -82,6 +82,7 @@
                     <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                     <button type="button" id="continue-2" class="arrow-button" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                     <button type="button" id="continue-3" class="arrow-button" onclick="continue3()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-4" class="arrow-button" onclick="continue4()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->
@@ -96,6 +97,17 @@
                 <div class="col-3 col-md-4"></div>
                 <button type="button" id="reload-button" class="col-6 col-md-4" onclick="reloadGame()">Start over</button>
                 <div class="col-3 col-md-4"></div>
+            </div>
+        </div>
+        <div id="name-modal" class="container-fluid modal" hidden>
+            <div class="row story-frame">
+                <div class="col-md-4"></div>
+                <div id="name-box" class="col-12 col-md-4 text-center">
+                    <h4>What's your name?</h4>
+                    <input type="text" id="name-input" placeholder="Your name" required>
+                    <button type="button" id="submit-name" onclick="submitName()">Enter</button>
+                </div>
+                <div class="col-md-4"></div>
             </div>
         </div>
     </section>

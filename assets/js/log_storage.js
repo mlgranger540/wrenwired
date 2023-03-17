@@ -12,7 +12,8 @@ export function getSessionStorage() {
 export function clearSessionStorage() {
     sessionStorage.removeItem("items");
     let list = "[]";
-    log.innerHTML = list;
+    let logList = document.getElementById("log-list");
+    logList.innerHTML = list;
 }
 
 export function updateLogOnPage(){
