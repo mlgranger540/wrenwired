@@ -1,12 +1,22 @@
-export function addToSessionStorage(item) {
+export function addLogItemToStorage(item) {
     let array = getSessionStorage();
     array.push(item);
     sessionStorage.setItem("items", JSON.stringify(array));
     updateLogOnPage();
 }
 
-export function getSessionStorage() {
+export function addNameToStorage(item) {
+    let array = getSessionStorage();
+    array.push(item);
+    sessionStorage.setItem("name", JSON.stringify(array));
+}
+
+function getSessionStorage() {
     return JSON.parse(sessionStorage.getItem("items"));
+}
+
+function getStoredName() {
+    return JSON.parse(sessionStorage.getItem("name"));
 }
 
 export function clearSessionStorage() {
@@ -16,15 +26,16 @@ export function clearSessionStorage() {
     logList.innerHTML = list;
 }
 
-export function updateLogOnPage(){
+export function updateLogOnPage() {
     let logList = document.getElementById("log-list");
     let list = "<ul>";
     let logItems = getSessionStorage();
+    let storedName = getStoredName();
     if (logItems == undefined) {
         sessionStorage.setItem("items", JSON.stringify([]));
     } else {
         logItems.forEach((x)=>{
-            list += `<li>${x}</li>`;
+            list += `<li>` + storedName + `${x}</li>`;
         })
     }
     list += "</ul>";

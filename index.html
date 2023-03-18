@@ -75,7 +75,7 @@
                     <p>N</p>
                 </div>
                 <!-- Click Area -->
-                <button type="button" id="tree-line" class="col-9 col-md-5 click-me" title="A line of trees in the distance" onclick="moveChar1()"></button>
+                <button type="button" id="tree-line" class="col-9 col-md-5 click-me" title="A line of trees in the distance" onclick="moveChar1()" disabled></button>
                 <!-- Text Box -->
                 <div id="text-box" class="col-9 col-md-5 text-box">
                     <p id="text-1" class="text">You wake up.</p>
@@ -83,13 +83,15 @@
                     <button type="button" id="continue-2" class="arrow-button" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                     <button type="button" id="continue-3" class="arrow-button" onclick="continue3()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                     <button type="button" id="continue-4" class="arrow-button" onclick="continue4()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-5" class="arrow-button" onclick="continue5()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="close-textbox" class="arrow-button" onclick="closeTextbox()" hidden><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->
             <div class="row">
                 <div class="col-md-3"></div>
-                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-3 turn-left" onclick="cycleLeft(this)">Turn left</button>
-                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)">Turn right</button>
+                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-3 turn-left" onclick="cycleLeft(this)" disabled>Turn left</button>
+                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)" disabled>Turn right</button>
                 <div class="col-md-3"></div>
             </div>
             <!-- Reload Button -->

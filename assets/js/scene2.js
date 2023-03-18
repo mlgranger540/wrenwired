@@ -1,5 +1,5 @@
 import {storyImgs} from "./objects/scene2_objects.js";
-import {addToSessionStorage, clearSessionStorage, updateLogOnPage} from "./log_storage.js";
+import {addLogItemToStorage, clearSessionStorage, updateLogOnPage} from "./session_storage.js";
 
 /**
  * Declare variables
@@ -21,10 +21,10 @@ let path1;
 let path2;
 let turnLeft;
 let turnRight;
+let text1;
 let continueButton1;
 let continueButton2;
 let continueButton3;
-let text1;
 
 /**
  * Assign variables on page load
@@ -47,10 +47,10 @@ window.onload = (event) => {
     path2 = document.getElementById("path-2");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
+    text1 = document.getElementById("text-1");
     continueButton1 = document.getElementById("continue-1");
     continueButton2 = document.getElementById("continue-2");
     continueButton3 = document.getElementById("continue-3");
-    text1 = document.getElementById("text-1");
     updateLogOnPage();
 };
 
@@ -107,7 +107,7 @@ window.cycleRight = function(element) {
             element.id = eastImg.next_right;
             turnLeft.id = eastImg.next_left;
             console.log("Turn north to east");
-            addToSessionStorage("You turned from north to east.");
+            addLogItemToStorage(" turned from north to east.");
             break;
         case "turn-right-2":
             startingImg.src = southImg.src;
@@ -121,7 +121,7 @@ window.cycleRight = function(element) {
             element.id = southImg.next_right;
             turnLeft.id = southImg.next_left;
             console.log("Turn east to south");
-            addToSessionStorage("You turned from east to south.");
+            addLogItemToStorage(" turned from east to south.");
             break;
         case "turn-right-3":
             startingImg.src = westImg.src;
@@ -135,7 +135,7 @@ window.cycleRight = function(element) {
             element.id = westImg.next_right;
             turnLeft.id = westImg.next_left;
             console.log("Turn south to west");
-            addToSessionStorage("You turned from south to west.");
+            addLogItemToStorage(" turned from south to west.");
             break;
         case "turn-right-4":
             startingImg.src = northImg.src;
@@ -149,7 +149,7 @@ window.cycleRight = function(element) {
             element.id = northImg.next_right;
             turnLeft.id = northImg.next_left;
             console.log("Turn west to north");
-            addToSessionStorage("You turned from west to north.");
+            addLogItemToStorage(" turned from west to north.");
             break;
     }
 }
@@ -168,7 +168,7 @@ window.cycleLeft = function(element) {
             element.id = westImg.next_left;
             turnRight.id = westImg.next_right;
             console.log("Turn north to west");
-            addToSessionStorage("You turned from north to west.");
+            addLogItemToStorage(" turned from north to west.");
             break;
         case "turn-left-2":
             startingImg.src = southImg.src;
@@ -182,7 +182,7 @@ window.cycleLeft = function(element) {
             element.id = southImg.next_left;
             turnRight.id = southImg.next_right;
             console.log("Turn west to south");
-            addToSessionStorage("You turned from west to south.");
+            addLogItemToStorage(" turned from west to south.");
             break;
         case "turn-left-3":
             startingImg.src = eastImg.src;
@@ -196,7 +196,7 @@ window.cycleLeft = function(element) {
             element.id = eastImg.next_left;
             turnRight.id = eastImg.next_right;
             console.log("Turn south to east");
-            addToSessionStorage("You turned from south to east.");
+            addLogItemToStorage(" turned from south to east.");
             break;
         case "turn-left-4":
             startingImg.src = northImg.src;
@@ -210,7 +210,7 @@ window.cycleLeft = function(element) {
             element.id = northImg.next_left;
             turnRight.id = northImg.next_right;
             console.log("Turn east to north");
-            addToSessionStorage("You turned from east to north.");
+            addLogItemToStorage(" turned from east to north.");
             break;
     }
 }
@@ -250,13 +250,13 @@ window.continue3 = function() {
  */
 window.moveChar1 = function() {
     console.log("You found a way forward!");
-    addToSessionStorage("You moved onward to the west.");
+    addLogItemToStorage(" moved onward to the west.");
     window.location.replace("page3_west_path.html");
 }
 
 window.moveChar2 = function() {
     console.log("You found a way forward!");
-    addToSessionStorage("You moved onward to the east.");
+    addLogItemToStorage(" moved onward to the east.");
     window.location.replace("page3_east_path.html");
 }
 

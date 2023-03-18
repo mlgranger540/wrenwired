@@ -1,5 +1,5 @@
 import {storyImgs} from "./objects/scene1_objects.js";
-import {addToSessionStorage, clearSessionStorage, updateLogOnPage} from "./log_storage.js";
+import {addLogItemToStorage, addNameToStorage, clearSessionStorage, updateLogOnPage} from "./session_storage.js";
 
 /**
  * Declare variables
@@ -18,11 +18,13 @@ let compass;
 let treeLine;
 let turnLeft;
 let turnRight;
+let text1;
 let continueButton1;
 let continueButton2;
 let continueButton3;
 let continueButton4;
-let text1;
+let continueButton5;
+let closeTextbox;
 let nameModal;
 let nameInput;
 
@@ -44,11 +46,13 @@ window.onload = (event) => {
     treeLine = document.getElementById("tree-line");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
+    text1 = document.getElementById("text-1");
     continueButton1 = document.getElementById("continue-1");
     continueButton2 = document.getElementById("continue-2");
     continueButton3 = document.getElementById("continue-3");
     continueButton4 = document.getElementById("continue-4");
-    text1 = document.getElementById("text-1");
+    continueButton5 = document.getElementById("continue-5");
+    closeTextbox = document.getElementById("close-textbox");
     nameModal = document.getElementById("name-modal");
     nameInput = document.getElementById("name-input");
     updateLogOnPage();
@@ -104,7 +108,7 @@ window.cycleRight = function(element) {
             element.id = eastImg.next_right;
             turnLeft.id = eastImg.next_left;
             console.log("Turn north to east");
-            addToSessionStorage("You turned from north to east.");
+            addLogItemToStorage(" turned from north to east.");
             break;
         case "turn-right-2":
             startingImg.src = southImg.src;
@@ -115,7 +119,7 @@ window.cycleRight = function(element) {
             element.id = southImg.next_right;
             turnLeft.id = southImg.next_left;
             console.log("Turn east to south");
-            addToSessionStorage("You turned from east to south.");
+            addLogItemToStorage(" turned from east to south.");
             break;
         case "turn-right-3":
             startingImg.src = westImg.src;
@@ -126,7 +130,7 @@ window.cycleRight = function(element) {
             element.id = westImg.next_right;
             turnLeft.id = westImg.next_left;
             console.log("Turn south to west");
-            addToSessionStorage("You turned from south to west.");
+            addLogItemToStorage(" turned from south to west.");
             break;
         case "turn-right-4":
             startingImg.src = northImg.src;
@@ -137,7 +141,7 @@ window.cycleRight = function(element) {
             element.id = northImg.next_right;
             turnLeft.id = northImg.next_left;
             console.log("Turn west to north");
-            addToSessionStorage("You turned from west to north.");
+            addLogItemToStorage(" turned from west to north.");
             break;
     }
 }
@@ -153,7 +157,7 @@ window.cycleLeft = function(element) {
             element.id = westImg.next_left;
             turnRight.id = westImg.next_right;
             console.log("Turn north to west");
-            addToSessionStorage("You turned from north to west.");
+            addLogItemToStorage(" turned from north to west.");
             break;
         case "turn-left-2":
             startingImg.src = southImg.src;
@@ -164,7 +168,7 @@ window.cycleLeft = function(element) {
             element.id = southImg.next_left;
             turnRight.id = southImg.next_right;
             console.log("Turn west to south");
-            addToSessionStorage("You turned from west to south.");
+            addLogItemToStorage(" turned from west to south.");
             break;
         case "turn-left-3":
             startingImg.src = eastImg.src;
@@ -175,7 +179,7 @@ window.cycleLeft = function(element) {
             element.id = eastImg.next_left;
             turnRight.id = eastImg.next_right;
             console.log("Turn south to east");
-            addToSessionStorage("You turned from south to east.");
+            addLogItemToStorage(" turned from south to east.");
             break;
         case "turn-left-4":
             startingImg.src = northImg.src;
@@ -186,7 +190,7 @@ window.cycleLeft = function(element) {
             element.id = northImg.next_left;
             turnRight.id = northImg.next_right;
             console.log("Turn east to north");
-            addToSessionStorage("You turned from east to north.");
+            addLogItemToStorage(" turned from east to north.");
             break;
     }
 }
@@ -213,7 +217,6 @@ window.continue2 = function() {
 
 window.continue3 = function() {
     let text3 = document.getElementById("text-3");
-    let continueButton3 = document.getElementById("continue-3");
     text3.innerHTML = "Actually... after a second, you do remember one thing. Your name.";
     text3.id = "text-4";
     continueButton3.hidden = true;
@@ -221,7 +224,18 @@ window.continue3 = function() {
 }
 
 window.continue4 = function() {
+    continueButton4.hidden = true;
     nameModal.hidden = false;
+}
+
+window.continue5 = function() {
+    let text5 = document.getElementById("text-5");
+    text5.innerHTML = "With no idea what else to do, you start looking for something, anything, to move towards.";
+    turnLeft.disabled = false;
+    turnRight.disabled = false;
+    treeLine.disabled = false;
+    continueButton5.hidden = true;
+    closeTextbox.hidden = false;
 }
 
 window.submitName = function() {
@@ -236,8 +250,10 @@ window.submitName = function() {
     } else if (regexTest) {
         console.log("Passed");
         console.log(`Hello ${name}`);
+        addNameToStorage(name);
+        addLogItemToStorage(" remembered their name.");
         nameModal.hidden = true;
-        continueButton4.hidden = true;
+        continueButton5.hidden = false;
         let text4 = document.getElementById("text-4");
         text4.innerHTML = `${name}. Your name is ${name}.`;
         text4.id = "text-5";
@@ -250,6 +266,12 @@ window.submitName = function() {
     }
 }
 
+window.closeTextbox = function() {
+    let textbox = document.getElementById("text-box");
+    textbox.hidden = true;
+    closeTextbox.hidden = true;
+}
+
 
 /**
  * Click areas
@@ -257,7 +279,7 @@ window.submitName = function() {
  */
 window.moveChar1 = function() {
     console.log("You found the way forward!");
-    addToSessionStorage("You moved onward to the north.");
+    addLogItemToStorage(" moved onward to the north.");
     window.location.replace("page2.html");
 }
 
