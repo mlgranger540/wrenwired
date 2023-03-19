@@ -36,29 +36,33 @@
             <div class="row story-image">
                 <div class="col-md-3"></div>
                 <!-- Story Frame Image -->
-                <img id="starting-img" class="col-12 col-md-6" src="assets/images/forest-edge-n.png" alt="The edge of a forest - north" title="The edge of the forest">
+                <img id="starting-img" class="col-12 col-md-6" src="assets/images/forest-edge-n.png" alt="The edge of a forest - north" title="The edge of the forest, trees thick ahead of you">
                 <div class="col-md-3"></div>
                 <!-- Compass Indicator -->
                 <div id="compass" class="col-1 page-2-compass">
                     <p>N</p>
                 </div>
                 <!-- Click Area -->
-                <button type="button" id="river-1" class="col-4 col-md-2 click-me" title="A small river running through the trees" onclick="moveChar1()" hidden></button>
-                <button type="button" id="river-2" class="col-4 col-md-2 click-me" title="A small river running through the trees" onclick="moveChar1()" hidden></button>
-                <button type="button" id="path-1" class="col-4 col-md-2 click-me" title="A slight worn-down path is just about visible" onclick="moveChar2()" hidden></button>
-                <button type="button" id="path-2" class="col-4 col-md-2 click-me" title="A slight worn-down path is just about visible" onclick="moveChar2()" hidden></button>
+                <button type="button" id="river-1" class="col-4 col-md-2 click-me" title="A small river winding through the trees" onclick="moveChar1()" hidden disabled></button>
+                <button type="button" id="river-2" class="col-4 col-md-2 click-me" title="A small river winding through the trees" onclick="moveChar1()" hidden disabled></button>
+                <button type="button" id="path-1" class="col-4 col-md-2 click-me" title="A slight worn-down path is just about visible" onclick="moveChar2()" hidden disabled></button>
+                <button type="button" id="path-2" class="col-4 col-md-1 click-me" title="A slight worn-down path is just about visible" onclick="moveChar2()" hidden disabled></button>
                 <!-- Text Box -->
                 <div id="text-box" class="col-9 col-md-5 text-box">
-                    <p id="text-1" class="text">You reach the edge of the forest. The trees are thick ahead of you. You don't see a clear way through.</p>
+                    <p id="text-1" class="text">You reach the edge of the forest.</p>
                     <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
-                    <button type="button" id="continue-2" class="arrow-button" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-north" class="arrow-button" onclick="continueNorth()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-east" class="arrow-button" onclick="continueEast()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-south" class="arrow-button" onclick="continueSouth()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-west" class="arrow-button" onclick="continueWest()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="close-textbox" class="arrow-button" onclick="closeTextbox()" hidden><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->
             <div class="row">
                 <div class="col-md-3"></div>
-                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-3 turn-left" onclick="cycleLeft(this)">Turn left</button>
-                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)">Turn right</button>
+                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-3 turn-left" onclick="cycleLeft(this)" disabled>Turn left</button>
+                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)" disabled>Turn right</button>
                 <div class="col-md-3"></div>
             </div>
             <!-- Reload Button -->

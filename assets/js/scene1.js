@@ -18,6 +18,7 @@ let compass;
 let treeLine;
 let turnLeft;
 let turnRight;
+let textbox;
 let text1;
 let continueButton1;
 let continueButton2;
@@ -46,6 +47,7 @@ window.onload = (event) => {
     treeLine = document.getElementById("tree-line");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
+    textbox = document.getElementById("text-box");
     text1 = document.getElementById("text-1");
     continueButton1 = document.getElementById("continue-1");
     continueButton2 = document.getElementById("continue-2");
@@ -267,7 +269,6 @@ window.submitName = function() {
 }
 
 window.closeTextbox = function() {
-    let textbox = document.getElementById("text-box");
     textbox.hidden = true;
     closeTextbox.hidden = true;
 }

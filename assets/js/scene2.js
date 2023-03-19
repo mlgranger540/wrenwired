@@ -21,10 +21,10 @@ let path1;
 let path2;
 let turnLeft;
 let turnRight;
+let textbox;
 let text1;
 let continueButton1;
-let continueButton2;
-let continueButton3;
+let closeTextbox;
 
 /**
  * Assign variables on page load
@@ -47,10 +47,10 @@ window.onload = (event) => {
     path2 = document.getElementById("path-2");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
+    textbox = document.getElementById("text-box");
     text1 = document.getElementById("text-1");
     continueButton1 = document.getElementById("continue-1");
-    continueButton2 = document.getElementById("continue-2");
-    continueButton3 = document.getElementById("continue-3");
+    closeTextbox = document.getElementById("close-textbox");
     updateLogOnPage();
 };
 
@@ -100,6 +100,9 @@ window.cycleRight = function(element) {
             startingImg.alt = eastImg.alt;
             startingImg.title = eastImg.title;
             compass.innerHTML = "<p>E</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = eastImg.text;
             river1.hidden = true;
             river2.hidden = true;
             path1.hidden = false;
@@ -114,6 +117,9 @@ window.cycleRight = function(element) {
             startingImg.alt = southImg.alt;
             startingImg.title = southImg.title;
             compass.innerHTML = "<p>S</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = southImg.text;
             river1.hidden = true;
             river2.hidden = true;
             path1.hidden = true;
@@ -128,6 +134,9 @@ window.cycleRight = function(element) {
             startingImg.alt = westImg.alt;
             startingImg.title = westImg.title;
             compass.innerHTML = "<p>W</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = westImg.text;
             river1.hidden = false;
             river2.hidden = false;
             path1.hidden = true;
@@ -142,6 +151,9 @@ window.cycleRight = function(element) {
             startingImg.alt = northImg.alt;
             startingImg.title = northImg.title;
             compass.innerHTML = "<p>N</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = northImg.text;
             river1.hidden = true;
             river2.hidden = true;
             path1.hidden = true;
@@ -161,6 +173,9 @@ window.cycleLeft = function(element) {
             startingImg.alt = westImg.alt;
             startingImg.title = westImg.title;
             compass.innerHTML = "<p>W</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = westImg.text;
             river1.hidden = false;
             river2.hidden = false;
             path1.hidden = true;
@@ -175,6 +190,9 @@ window.cycleLeft = function(element) {
             startingImg.alt = southImg.alt;
             startingImg.title = southImg.title;
             compass.innerHTML = "<p>S</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = southImg.text;
             river1.hidden = true;
             river2.hidden = true;
             path1.hidden = true;
@@ -189,6 +207,9 @@ window.cycleLeft = function(element) {
             startingImg.alt = eastImg.alt;
             startingImg.title = eastImg.title;
             compass.innerHTML = "<p>E</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = eastImg.text;
             river1.hidden = true;
             river2.hidden = true;
             path1.hidden = false;
@@ -203,6 +224,9 @@ window.cycleLeft = function(element) {
             startingImg.alt = northImg.alt;
             startingImg.title = northImg.title;
             compass.innerHTML = "<p>N</p>";
+            textbox.hidden = false;
+            closeTextbox.hidden = false;
+            text1.innerHTML = northImg.text;
             river1.hidden = true;
             river2.hidden = true;
             path1.hidden = true;
@@ -221,26 +245,20 @@ window.cycleLeft = function(element) {
  * Changes text of p element in textbox on click, updates the element's ID number, then hides continueButtonN and displays continueButtonN+1
  */
 window.continue1 = function() {
-    text1.innerHTML = "You are in the middle of an empty field. You don't remember how you got there.";
-    text1.id = "text-2";
+    text1.innerHTML = "The trees are thick ahead of you. You don't see a clear way through.";
+    turnLeft.disabled = false;
+    turnRight.disabled = false;
+    river1.disabled = false;
+    river2.disabled = false;
+    path1.disabled = false;
+    path2.disabled = false;
     continueButton1.hidden = true;
-    continueButton2.hidden = false;
+    closeTextbox.hidden = false;
 }
 
-window.continue2 = function() {
-    let text2 = document.getElementById("text-2");
-    text2.innerHTML = "You don't remember... anything.";
-    text2.id = "text-3";
-    continueButton2.hidden = true;
-    continueButton3.hidden = false;
-}
-
-window.continue3 = function() {
-    let text3 = document.getElementById("text-3");
-    let continueButton3 = document.getElementById("continue-3");
-    text3.innerHTML = "Actually... after a second, you do remember one thing. Your name.";
-    text3.id = "text-4";
-    continueButton3.hidden = true;
+window.closeTextbox = function() {
+    textbox.hidden = true;
+    closeTextbox.hidden = true;
 }
 
 
