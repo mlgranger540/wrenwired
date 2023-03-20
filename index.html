@@ -20,8 +20,8 @@
         <!-- Instructions Modal -->
         <div id="instructions-modal" class="container-fluid modal">
             <div class="row modal-row story-frame">
-                <div class="col-md-3"></div>
-                <div id="instruction-box" class="col-12 col-md-6">
+                <div class="col-lg-3"></div>
+                <div id="instruction-box" class="col-12 col-lg-6">
                     <div class="container-fluid text-center">
                         <h1>Wrenwired</h1>
                     </div>
@@ -42,7 +42,7 @@
                         <button type="button" id="play-button" onclick="play()">Play</button>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
+                <div class="col-lg-3"></div>
             </div>
         </div>
     </section>
@@ -52,32 +52,32 @@
         </div>
         <!-- Log -->
         <div id="log">
-            <div class="col-12 col-sm-6 col-md-3 panel" hidden>
+            <div class="col-12 col-sm-6 col-lg-3 panel" hidden>
                 <h3>Log</h3>
                 <div id="log-list" class="list">
                     <p><em>[Click something to start your journey.]</em></p>
                 </div>
             </div>
             <!-- Open/Close Log Button -->
-            <div class="col-md-1">
+            <div class="col-lg-1">
                 <button type="button" id="open-log" onclick="openLog()"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
         <!-- Story Frame -->
         <div class="container-fluid story-frame">
             <div class="row story-image">
-                <div class="col-md-3"></div>
+                <div class="col-lg-3"></div>
                 <!-- Story Frame Image -->
-                <img id="starting-img" class="col-12 col-md-6" src="assets/images/starting-point-n.png" alt="An empty field - north" title="An empty barren field with a line of trees in the distance">
-                <div class="col-md-3"></div>
+                <img id="starting-img" class="col-12 col-lg-6" src="assets/images/starting-point-n.png" alt="An empty field - north" title="An empty barren field with a line of trees in the distance">
+                <div class="col-lg-3"></div>
                 <!-- Compass Indicator -->
                 <div id="compass" class="col-1 compass">
                     <p>N</p>
                 </div>
                 <!-- Click Area -->
-                <button type="button" id="tree-line" class="col-9 col-md-5 click-me" title="A line of trees in the distance" onclick="moveChar1()" disabled></button>
+                <button type="button" id="tree-line" class="col-9 col-lg-5 click-me" title="A line of trees in the distance" onclick="moveChar1()" disabled></button>
                 <!-- Text Box -->
-                <div id="text-box" class="col-9 col-md-5 text-box">
+                <div id="text-box" class="col-9 col-lg-5 text-box">
                     <p id="text-1" class="text">You wake up.</p>
                     <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
                     <button type="button" id="continue-2" class="arrow-button" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
@@ -89,28 +89,28 @@
             </div>
             <!-- Turn Buttons -->
             <div class="row">
-                <div class="col-md-3"></div>
-                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-3 turn-left" onclick="cycleLeft(this)" disabled>Turn left</button>
-                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)" disabled>Turn right</button>
-                <div class="col-md-3"></div>
+                <div class="col-lg-3"></div>
+                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-lg-3 turn-left" onclick="cycleLeft(this)" disabled>Turn left</button>
+                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-lg-3 turn-right" onclick="cycleRight(this)" disabled>Turn right</button>
+                <div class="col-lg-3"></div>
             </div>
             <!-- Reload Button -->
             <div class="row">
-                <div class="col-3 col-md-4"></div>
-                <button type="button" id="reload-button" class="col-6 col-md-4" onclick="reloadGame()">Start over</button>
-                <div class="col-3 col-md-4"></div>
+                <div class="col-3 col-lg-4"></div>
+                <button type="button" id="reload-button" class="col-6 col-lg-4" onclick="reloadGame()">Start over</button>
+                <div class="col-3 col-lg-4"></div>
             </div>
         </div>
         <!-- Name Input Modal -->
         <div id="name-modal" class="container-fluid modal" hidden>
             <div class="row story-frame">
-                <div class="col-2 col-sm-3 col-md-4"></div>
-                <div id="name-box" class="col-8 col-sm-6 col-md-4 text-center">
+                <div class="col-2 col-sm-3 col-lg-4"></div>
+                <div id="name-box" class="col-8 col-sm-6 col-lg-4 text-center">
                     <h4>What's your name?</h4>
                     <input type="text" id="name-input" placeholder="Your name" required>
                     <button type="button" id="submit-name" onclick="submitName()">Enter</button>
                 </div>
-                <div class="col-2 col-sm-3 col-md-4"></div>
+                <div class="col-2 col-sm-3 col-lg-4"></div>
             </div>
         </div>
     </section>
@@ -119,12 +119,12 @@
 <footer hidden>
     <div class="container-fluid story-frame">
         <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-12 col-md-6">
+            <div class="col-lg-3"></div>
+            <div class="col-12 col-lg-6">
                 <!-- Copyright -->
                 <h3>© ML Granger</h3>
             </div>
-            <div class="col-md-3"></div>
+            <div class="col-lg-3"></div>
         </div>
     </div>
 </footer>

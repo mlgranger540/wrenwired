@@ -82,7 +82,7 @@ window.openLog = function() {
         openLogButton.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
         if (viewportWidth < 427) {
             openLogButton.style.left = "91%";
-        } else if (viewportWidth < 768) {
+        } else if (viewportWidth < 769) {
             openLogButton.style.left = "44%";
         } else {
             openLogButton.style.left = "22%";
