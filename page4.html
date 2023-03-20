@@ -12,7 +12,7 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css">
     <!-- JavaScript -->
     <script src="https://kit.fontawesome.com/22fc12a701.js" crossorigin="anonymous"></script>
-    <script src="assets/js/scene1.js" type="module"></script>
+    <script src="assets/js/scene4.js" type="module"></script>
 </head>
 
 <body>
@@ -27,8 +27,24 @@
                     </div>
                     <h2>Thank you for playing!</h2>
                     <p>This is all I have for now. I hope you enjoyed :D</p>
+                    <!-- Reload Button -->
+                    <div class="row">
+                        <div class="col-3 col-lg-3"></div>
+                        <button type="button" id="reload-button-end" class="col-6 col-lg-6" onclick="reloadGame()">Start over</button>
+                        <div class="col-3 col-lg-3"></div>
+                    </div>
                 </div>
-                <div class="col-lg-3"></div>
+            </div>
+        </div>
+        <!-- Log -->
+        <div id="log">
+            <div class="col-12 col-sm-6 col-lg-3 panel" hidden>
+                <h3>Log</h3>
+                <div id="log-list" class="list"></div>
+            </div>
+            <!-- Open/Close Log Button -->
+            <div class="col-lg-1" hidden>
+                <button type="button" id="open-log" onclick="openLog()"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
     </section>

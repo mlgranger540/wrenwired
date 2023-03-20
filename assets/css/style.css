@@ -303,6 +303,11 @@ button {
     font-size: 130%;
 }
 
+#reload-button-end {
+    margin-top: 38%;
+    border-width: 15px;
+}
+
 
 /* Footer */
 
