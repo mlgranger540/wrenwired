@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrenwired</title>
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- JavaScript -->
+    <script src="https://kit.fontawesome.com/22fc12a701.js" crossorigin="anonymous"></script>
+    <script src="assets/js/scene3_west_path.js" type="module"></script>
+</head>
+
+<body>
+    <section id="story-frame-2">
+        <div class="container-fluid text-center">
+            <h1>Wrenwired</h1>
+        </div>
+        <!-- Log -->
+        <div id="log">
+            <div class="col-12 col-sm-6 col-md-3 panel" hidden>
+                <h3>Log</h3>
+                <div id="log-list" class="list"></div>
+            </div>
+            <!-- Open/Close Log Button -->
+            <div class="col-md-1">
+                <button type="button" id="open-log" onclick="openLog()"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+        <!-- Story Frame -->
+        <div class="container-fluid story-frame">
+            <div class="row story-image">
+                <div class="col-md-3"></div>
+                <!-- Story Frame Image -->
+                <img id="starting-img" class="col-12 col-md-6" src="assets/images/forest-edge-n.png" alt="The edge of a forest - north" title="The edge of the forest">
+                <div class="col-md-3"></div>
+                <!-- Compass Indicator -->
+                <div id="compass" class="col-1 page-2-compass">
+                    <p>N</p>
+                </div>
+                <!-- Click Area -->
+                <button type="button" id="forward-1" class="col-4 col-md-2 click-me" title="A way forward" onclick="moveChar1()" hidden></button>
+                <!-- Text Box -->
+                <div id="text-box" class="col-9 col-md-5 text-box">
+                    <p id="text-1" class="text">Reaching the river, you kneel down on the bank and cup your hands, taking a drink of the cool water.</p>
+                    <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <!-- Turn Buttons -->
+            <div class="row">
+                <div class="col-md-3"></div>
+                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-md-3 turn-left" onclick="cycleLeft(this)">Turn left</button>
+                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-md-3 turn-right" onclick="cycleRight(this)">Turn right</button>
+                <div class="col-md-3"></div>
+            </div>
+            <!-- Reload Button -->
+            <div class="row">
+                <div class="col-3 col-md-4"></div>
+                <button type="button" id="reload-button" class="col-6 col-md-4" onclick="reloadGame()">Start over</button>
+                <div class="col-3 col-md-4"></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<footer>
+    <div class="container-fluid story-frame">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-12 col-md-6">
+                <!-- Copyright -->
+                <h3>© ML Granger</h3>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+</footer>
+
+</html>

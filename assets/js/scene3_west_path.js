@@ -1,4 +1,4 @@
-import {storyImgs} from "./objects/scene2_objects.js";
+import {storyImgs} from "./objects/scene3_west_objects.js";
 import {addLogItemToStorage, clearSessionStorage, updateLogOnPage} from "./session_storage.js";
 
 /**
@@ -15,10 +15,6 @@ let eastImg;
 let southImg;
 let westImg;
 let compass;
-let river1;
-let river2;
-let path1;
-let path2;
 let turnLeft;
 let turnRight;
 let textbox;
@@ -41,10 +37,6 @@ window.onload = (event) => {
     southImg = storyImgs.southImg;
     westImg = storyImgs.westImg;
     compass = document.getElementById("compass");
-    river1 = document.getElementById("river-1");
-    river2 = document.getElementById("river-2");
-    path1 = document.getElementById("path-1");
-    path2 = document.getElementById("path-2");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
     textbox = document.getElementById("text-box");
@@ -91,13 +83,6 @@ window.cycleRight = function(element) {
             startingImg.alt = eastImg.alt;
             startingImg.title = eastImg.title;
             compass.innerHTML = "<p>E</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = eastImg.text;
-            river1.hidden = true;
-            river2.hidden = true;
-            path1.hidden = false;
-            path2.hidden = false;
             element.id = eastImg.next_right;
             turnLeft.id = eastImg.next_left;
             console.log("Turn north to east");
@@ -108,13 +93,6 @@ window.cycleRight = function(element) {
             startingImg.alt = southImg.alt;
             startingImg.title = southImg.title;
             compass.innerHTML = "<p>S</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = southImg.text;
-            river1.hidden = true;
-            river2.hidden = true;
-            path1.hidden = true;
-            path2.hidden = true;
             element.id = southImg.next_right;
             turnLeft.id = southImg.next_left;
             console.log("Turn east to south");
@@ -125,13 +103,6 @@ window.cycleRight = function(element) {
             startingImg.alt = westImg.alt;
             startingImg.title = westImg.title;
             compass.innerHTML = "<p>W</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = westImg.text;
-            river1.hidden = false;
-            river2.hidden = false;
-            path1.hidden = true;
-            path2.hidden = true;
             element.id = westImg.next_right;
             turnLeft.id = westImg.next_left;
             console.log("Turn south to west");
@@ -142,13 +113,6 @@ window.cycleRight = function(element) {
             startingImg.alt = northImg.alt;
             startingImg.title = northImg.title;
             compass.innerHTML = "<p>N</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = northImg.text;
-            river1.hidden = true;
-            river2.hidden = true;
-            path1.hidden = true;
-            path2.hidden = true;
             element.id = northImg.next_right;
             turnLeft.id = northImg.next_left;
             console.log("Turn west to north");
@@ -164,13 +128,6 @@ window.cycleLeft = function(element) {
             startingImg.alt = westImg.alt;
             startingImg.title = westImg.title;
             compass.innerHTML = "<p>W</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = westImg.text;
-            river1.hidden = false;
-            river2.hidden = false;
-            path1.hidden = true;
-            path2.hidden = true;
             element.id = westImg.next_left;
             turnRight.id = westImg.next_right;
             console.log("Turn north to west");
@@ -181,13 +138,6 @@ window.cycleLeft = function(element) {
             startingImg.alt = southImg.alt;
             startingImg.title = southImg.title;
             compass.innerHTML = "<p>S</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = southImg.text;
-            river1.hidden = true;
-            river2.hidden = true;
-            path1.hidden = true;
-            path2.hidden = true;
             element.id = southImg.next_left;
             turnRight.id = southImg.next_right;
             console.log("Turn west to south");
@@ -198,13 +148,6 @@ window.cycleLeft = function(element) {
             startingImg.alt = eastImg.alt;
             startingImg.title = eastImg.title;
             compass.innerHTML = "<p>E</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = eastImg.text;
-            river1.hidden = true;
-            river2.hidden = true;
-            path1.hidden = false;
-            path2.hidden = false;
             element.id = eastImg.next_left;
             turnRight.id = eastImg.next_right;
             console.log("Turn south to east");
@@ -215,13 +158,6 @@ window.cycleLeft = function(element) {
             startingImg.alt = northImg.alt;
             startingImg.title = northImg.title;
             compass.innerHTML = "<p>N</p>";
-            textbox.hidden = false;
-            closeTextbox.hidden = false;
-            text1.innerHTML = northImg.text;
-            river1.hidden = true;
-            river2.hidden = true;
-            path1.hidden = true;
-            path2.hidden = true;
             element.id = northImg.next_left;
             turnRight.id = northImg.next_right;
             console.log("Turn east to north");
@@ -236,7 +172,7 @@ window.cycleLeft = function(element) {
  * Changes text of p element in textbox on click, updates the element's ID number, then hides continueButtonN and displays continueButtonN+1
  */
 window.continue1 = function() {
-    text1.innerHTML = "The trees are thick ahead of you. You don't see a clear way through.";
+    text1.innerHTML = "After quenching your thirst, you sit down for a few minutes, listening to the flowing water and wondering what to do next.";
     turnLeft.style.color = "#D5D5D5";
     turnRight.style.color = "#D5D5D5";
     turnLeft.disabled = false;
@@ -258,13 +194,7 @@ window.closeTextbox = function() {
 window.moveChar1 = function() {
     console.log("You found a way forward!");
     addLogItemToStorage(" moved onward to the west.");
-    window.location.replace("page3_west_path.html");
-}
-
-window.moveChar2 = function() {
-    console.log("You found a way forward!");
-    addLogItemToStorage(" moved onward to the east.");
-    window.location.replace("page3_east_path.html");
+    window.location.replace("page4.html");
 }
 
 
