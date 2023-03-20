@@ -246,12 +246,10 @@ window.cycleLeft = function(element) {
  */
 window.continue1 = function() {
     text1.innerHTML = "The trees are thick ahead of you. You don't see a clear way through.";
+    turnLeft.style.color = "#D5D5D5";
+    turnRight.style.color = "#D5D5D5";
     turnLeft.disabled = false;
     turnRight.disabled = false;
-    river1.disabled = false;
-    river2.disabled = false;
-    path1.disabled = false;
-    path2.disabled = false;
     continueButton1.hidden = true;
     closeTextbox.hidden = false;
 }

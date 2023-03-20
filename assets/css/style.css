@@ -249,11 +249,13 @@ button {
 }
 
 .turn-left {
+    color: #646464;
     border-top: 0;
     border-right-width: 20px;
 }
 
 .turn-right {
+    color: #646464;
     border-top: 0;
     border-left-width: 20px;
 }
