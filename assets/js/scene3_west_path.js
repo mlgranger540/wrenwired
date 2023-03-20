@@ -5,21 +5,20 @@ import {addLogItemToStorage, clearSessionStorage, updateLogOnPage} from "./sessi
  * Declare variables
  */
 let viewportWidth;
-let modal;
 let log;
-let storyFrame;
-let footer;
 let startingImg;
 let northImg;
 let eastImg;
 let southImg;
 let westImg;
 let compass;
+let scream;
 let turnLeft;
 let turnRight;
 let textbox;
 let text1;
 let continueButton1;
+let continueButton2;
 let closeTextbox;
 
 /**
@@ -27,21 +26,20 @@ let closeTextbox;
  */
 window.onload = (event) => {
     viewportWidth = window.innerWidth;
-    modal = document.getElementById("modal");
     log = document.getElementsByClassName("panel")[0];
-    storyFrame = document.getElementById("story-frame-1");
-    footer = document.getElementsByTagName("footer")[0];
     startingImg = document.getElementById("starting-img");
     northImg = storyImgs.northImg;
     eastImg = storyImgs.eastImg;
     southImg = storyImgs.southImg;
     westImg = storyImgs.westImg;
     compass = document.getElementById("compass");
+    scream = document.getElementById("scream");
     turnLeft = document.getElementsByName("turn-left")[0];
     turnRight = document.getElementsByName("turn-right")[0];
     textbox = document.getElementById("text-box");
     text1 = document.getElementById("text-1");
     continueButton1 = document.getElementById("continue-1");
+    continueButton2 = document.getElementById("continue-2");
     closeTextbox = document.getElementById("close-textbox");
     updateLogOnPage();
 };
@@ -83,6 +81,7 @@ window.cycleRight = function(element) {
             startingImg.alt = eastImg.alt;
             startingImg.title = eastImg.title;
             compass.innerHTML = "<p>E</p>";
+            scream.hidden = true;
             element.id = eastImg.next_right;
             turnLeft.id = eastImg.next_left;
             console.log("Turn north to east");
@@ -93,6 +92,7 @@ window.cycleRight = function(element) {
             startingImg.alt = southImg.alt;
             startingImg.title = southImg.title;
             compass.innerHTML = "<p>S</p>";
+            scream.hidden = true;
             element.id = southImg.next_right;
             turnLeft.id = southImg.next_left;
             console.log("Turn east to south");
@@ -103,6 +103,7 @@ window.cycleRight = function(element) {
             startingImg.alt = westImg.alt;
             startingImg.title = westImg.title;
             compass.innerHTML = "<p>W</p>";
+            scream.hidden = true;
             element.id = westImg.next_right;
             turnLeft.id = westImg.next_left;
             console.log("Turn south to west");
@@ -113,6 +114,7 @@ window.cycleRight = function(element) {
             startingImg.alt = northImg.alt;
             startingImg.title = northImg.title;
             compass.innerHTML = "<p>N</p>";
+            scream.hidden = false;
             element.id = northImg.next_right;
             turnLeft.id = northImg.next_left;
             console.log("Turn west to north");
@@ -128,6 +130,7 @@ window.cycleLeft = function(element) {
             startingImg.alt = westImg.alt;
             startingImg.title = westImg.title;
             compass.innerHTML = "<p>W</p>";
+            scream.hidden = true;
             element.id = westImg.next_left;
             turnRight.id = westImg.next_right;
             console.log("Turn north to west");
@@ -138,6 +141,7 @@ window.cycleLeft = function(element) {
             startingImg.alt = southImg.alt;
             startingImg.title = southImg.title;
             compass.innerHTML = "<p>S</p>";
+            scream.hidden = true;
             element.id = southImg.next_left;
             turnRight.id = southImg.next_right;
             console.log("Turn west to south");
@@ -148,6 +152,7 @@ window.cycleLeft = function(element) {
             startingImg.alt = eastImg.alt;
             startingImg.title = eastImg.title;
             compass.innerHTML = "<p>E</p>";
+            scream.hidden = true;
             element.id = eastImg.next_left;
             turnRight.id = eastImg.next_right;
             console.log("Turn south to east");
@@ -158,6 +163,7 @@ window.cycleLeft = function(element) {
             startingImg.alt = northImg.alt;
             startingImg.title = northImg.title;
             compass.innerHTML = "<p>N</p>";
+            scream.hidden = false;
             element.id = northImg.next_left;
             turnRight.id = northImg.next_right;
             console.log("Turn east to north");
@@ -173,11 +179,19 @@ window.cycleLeft = function(element) {
  */
 window.continue1 = function() {
     text1.innerHTML = "After quenching your thirst, you sit down for a few minutes, listening to the flowing water and wondering what to do next.";
+    text1.id = "text-2";
+    continueButton1.hidden = true;
+    continueButton2.hidden = false;
+}
+
+window.continue2 = function() {
+    let text2 = document.getElementById("text-2");
+    text2.innerHTML = "Suddenly, a scream makes you jump out of your skin. It came from the north. Part of you wants to ignore it... but you can't.";
     turnLeft.style.color = "#D5D5D5";
     turnRight.style.color = "#D5D5D5";
     turnLeft.disabled = false;
     turnRight.disabled = false;
-    continueButton1.hidden = true;
+    continueButton2.hidden = true;
     closeTextbox.hidden = false;
 }
 

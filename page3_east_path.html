@@ -36,25 +36,27 @@
             <div class="row story-image">
                 <div class="col-lg-3"></div>
                 <!-- Story Frame Image -->
-                <img id="starting-img" class="col-12 col-lg-6" src="assets/images/forest-edge-n.png" alt="The edge of a forest - north" title="The edge of the forest">
+                <img id="starting-img" class="col-12 col-lg-6" src="assets/images/town-e.png" alt="The edge of a town - east" title="The town continues to the east, all the doors flung open and no people to be seen">
                 <div class="col-lg-3"></div>
                 <!-- Compass Indicator -->
-                <div id="compass" class="col-1 page-2-compass">
-                    <p>N</p>
+                <div id="compass" class="col-1 page-3-compass">
+                    <p>E</p>
                 </div>
                 <!-- Click Area -->
-                <button type="button" id="forward-1" class="col-4 col-lg-2 click-me" title="A way forward" onclick="moveChar1()" hidden></button>
+                <button type="button" id="alley" class="col-4 col-lg-1 click-me" title="The rustling came from here" onclick="moveChar1()" hidden></button>
                 <!-- Text Box -->
                 <div id="text-box" class="col-9 col-lg-5 text-box">
                     <p id="text-1" class="text">After following the path for a little while, you come across a small town nestled in the forest.</p>
                     <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="continue-2" class="arrow-button" onclick="continue2()" hidden><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="close-textbox" class="arrow-button" onclick="closeTextbox()" hidden><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->
             <div class="row">
                 <div class="col-lg-3"></div>
-                <button type="button" id="turn-left-1" name="turn-left" class="col-6 col-lg-3 turn-left" onclick="cycleLeft(this)">Turn left</button>
-                <button type="button" id="turn-right-1" name="turn-right" class="col-6 col-lg-3 turn-right" onclick="cycleRight(this)">Turn right</button>
+                <button type="button" id="turn-left-4" name="turn-left" class="col-6 col-lg-3 turn-left" onclick="cycleLeft(this)" disabled>Turn left</button>
+                <button type="button" id="turn-right-2" name="turn-right" class="col-6 col-lg-3 turn-right" onclick="cycleRight(this)" disabled>Turn right</button>
                 <div class="col-lg-3"></div>
             </div>
             <!-- Reload Button -->
