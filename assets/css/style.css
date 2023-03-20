@@ -161,6 +161,10 @@ p {
     color: #fff;
 }
 
+.page-3-compass {
+    color: #646464;
+}
+
 .click-me {
     position: absolute;
     border: 0;
@@ -197,6 +201,18 @@ p {
     padding: 4%;
 }
 
+#alley {
+    top: 30%;
+    left: 42%;
+    padding: 6%;
+}
+
+#scream {
+    top: 35%;
+    left: 50%;
+    padding: 6%;
+}
+
 /* Text box */
 
 .text-box {
@@ -211,8 +227,8 @@ p {
 .arrow-button {
     position: absolute;
     right: 5%;
-    top: 50%;
-    padding: 0;
+    bottom: 35px;
+    padding: 2px;
     border: 0;
     background-color: rgba(0,0,0,0);
 }
@@ -266,6 +282,28 @@ button {
 }
 
 
+/* Thank You Box */
+
+#thank-you-box {
+    padding: 0 5%;
+    height: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    background-color: #0a0a0a;
+}
+
+#thank-you-box h2 {
+    padding-top: 30%;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+#thank-you-box p {
+    padding-top: 4%;
+    font-size: 130%;
+}
+
+
 /* Footer */
 
 footer h3 {
@@ -297,6 +335,10 @@ footer h3 {
 
     .story-frame img {
         border-width: 22px;
+    }
+
+    .arrow-button {
+        bottom: 20px;
     }
 
     button {
@@ -373,6 +415,10 @@ footer h3 {
 
     .text-box {
         padding: 2.5% 3%;
+    }
+
+    .arrow-button {
+        bottom: 15px;
     }
 
     button {

@@ -57,6 +57,7 @@ window.onload = (event) => {
     closeTextbox = document.getElementById("close-textbox");
     nameModal = document.getElementById("name-modal");
     nameInput = document.getElementById("name-input");
+    clearSessionStorage();
     updateLogOnPage();
 };
 
@@ -243,7 +244,7 @@ window.continue5 = function() {
 }
 
 window.submitName = function() {
-    const regex = new RegExp(/^[a-zA-Z]+$/,'gi');
+    const regex = new RegExp(/^[a-zA-Z ]+$/,'gi');
     let name = nameInput.value;
     console.log(name);
     let regexTest = regex.test(name);

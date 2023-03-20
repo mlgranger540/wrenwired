@@ -5,10 +5,7 @@ import {addLogItemToStorage, clearSessionStorage, updateLogOnPage} from "./sessi
  * Declare variables
  */
 let viewportWidth;
-let modal;
 let log;
-let storyFrame;
-let footer;
 let startingImg;
 let northImg;
 let eastImg;
@@ -31,10 +28,7 @@ let closeTextbox;
  */
 window.onload = (event) => {
     viewportWidth = window.innerWidth;
-    modal = document.getElementById("modal");
     log = document.getElementsByClassName("panel")[0];
-    storyFrame = document.getElementById("story-frame-1");
-    footer = document.getElementsByTagName("footer")[0];
     startingImg = document.getElementById("starting-img");
     northImg = storyImgs.northImg;
     eastImg = storyImgs.eastImg;
