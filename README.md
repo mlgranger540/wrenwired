@@ -40,7 +40,15 @@ The title attribute is used on the images and clickable areas to add description
 
 Within the story frame is a textbox which takes the user through the story, using arrow buttons to continue to the next line of text, and a close button to close the box when the text is finished.
 
-On the first page, the turn buttons and clickable area are disabled until the user progresses through the text and inputs a name, which must only contain letters - numbers and other characters will return a validity error message and not be accepted. Once a valid name has been inputted, this name is then stored and used throughout the game.
+### Name Input Modal
+
+![Name Input Modal](assets/docs/readme-images/name-input.png)
+
+On the first page, the turn buttons and clickable area are disabled until the user progresses through the text, as this opens a modal allowing them to input a name. The name must only contain letters - numbers and special characters will return a validity error message and not be accepted.
+
+![Name Input Validity](assets/docs/readme-images/name-validity.png)
+
+Once a valid name has been inputted, this name is then stored and used in other places throughout the game.
 
 ### Log
 
