@@ -2,6 +2,8 @@
 
 This project is a point-and-click choose-your-own-adventure style game about a character who wakes up with no memories and has to figure out what happened to them.
 
+![Wrenwired](assets/docs/readme-images/wrenwired.png)
+
 View the live project [here](https://mlgranger540.github.io/milestone-2/).
 
 ---
