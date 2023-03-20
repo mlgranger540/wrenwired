@@ -205,7 +205,7 @@ p {
     left: 29.2%;
     padding: 2% 3%;
     background-color: #191919;
-    z-index: 2;
+    z-index: 1;
 }
 
 .arrow-button {
@@ -423,6 +423,14 @@ footer h3 {
     .text-box {
         left: 12.5%;
         padding: 4% 3%;
+    }
+
+    #name-box {
+        margin-top: 40%;
+    }
+
+    #submit-name {
+        margin-top: 3%;
     }
 }
 
