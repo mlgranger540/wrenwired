@@ -145,7 +145,13 @@ I used the font Impact for the title, as this font is very striking and eye-catc
 
 ### Validation
 
-The website passed through the [W3C validator](https://validator.w3.org/) with no issues.
+All HTML pages passed through the [W3C validator](https://validator.w3.org/) with no issues. Each page was checked by direct input as well as by running the whole site through the validator via its URI.
+
+![HTML Validation](assets/docs/readme-images/html-validation.png)
+
+CSS passed through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues. CSS was checked by direct input as well as via the site URI.
+
+![CSS Validation](assets/docs/readme-images/css-validation.png)
 
 ### Accessibility
 
