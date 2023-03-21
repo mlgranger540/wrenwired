@@ -28,7 +28,7 @@
             </div>
             <!-- Open/Close Log Button -->
             <div class="col-lg-1">
-                <button type="button" id="open-log" onclick="openLog()"><i class="fa-solid fa-chevron-right"></i></button>
+                <button type="button" id="open-log" onclick="openLog()" aria-label="open log panel"><i class="fa-solid fa-chevron-right"></i></button>
             </div>
         </div>
         <!-- Story Frame -->
@@ -50,8 +50,8 @@
                 <!-- Text Box -->
                 <div id="text-box" class="col-9 col-lg-5 text-box">
                     <p id="text-1" class="text">You reach the edge of the forest.</p>
-                    <button type="button" id="continue-1" class="arrow-button" onclick="continue1()"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
-                    <button type="button" id="close-textbox" class="arrow-button" onclick="closeTextbox()" hidden><i class="fa-solid fa-xmark"></i></button>
+                    <button type="button" id="continue-1" class="arrow-button" onclick="continue1()" aria-label="continue reading"><i class="fa-solid fa-caret-right"></i><i class="fa-solid fa-caret-right"></i></button>
+                    <button type="button" id="close-textbox" class="arrow-button" onclick="closeTextbox()" aria-label="close textbox" hidden><i class="fa-solid fa-xmark"></i></button>
                 </div>
             </div>
             <!-- Turn Buttons -->

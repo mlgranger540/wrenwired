@@ -245,7 +245,7 @@ window.continue5 = function() {
 }
 
 /**
- * Name input checked again regular expression to ensure only valid names are submitted
+ * Name input checked against regular expression to ensure only valid names are submitted
  * If invalid, a custom validity error message shown to user
  */
 

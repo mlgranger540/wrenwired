@@ -145,6 +145,8 @@ I used the font Impact for the title, as this font is very striking and eye-catc
 
 ### Validation
 
+The website passed through the [W3C validator](https://validator.w3.org/) with no issues.
+
 ### Accessibility
 
 ### Known Bugs
