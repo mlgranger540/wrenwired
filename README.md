@@ -12,7 +12,7 @@ View the live project [here](https://mlgranger540.github.io/milestone-2/).
 
 ### Goals
 
-- Goals for new visitors - play the game, explore the story, have fun
+- Goals for new visitors - play the game and explore the story, get expected functionality from buttons and features, get feedback for actions, have fun
 
 - Goals for return visitors - replay the game, try different options/paths
 
@@ -125,6 +125,8 @@ I used the font Impact for the title, as this font is very striking and eye-catc
 
 ## Testing
 
+My project was thoroughly tested throughout the development process by both myself and other users. I opted mostly for manual testing over automated testing using Jest, as while automated testing is a very useful tool for testing small parts of code, it is not as good for end to end testing and ensuring the entire application works well together. Given the nature of this project being very user-focused, it felt more relevant to test mostly by getting real-life users to test the whole project.
+
 ### User Experience
 
 - All buttons have been thoroughly tested to ensure they work and perform as intended and take the user to the correct location if applicable.
@@ -155,7 +157,15 @@ CSS passed through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) 
 
 ### Accessibility
 
+[WAVE](https://wave.webaim.org/) was used to assess the accessbility of the website.
+
+![WAVE Report](assets/docs/readme-images/wave.png)
+
+It noted that I had buttons with no text to indicate their function to a screen reader user, so I added aria labels to make this clearer. It also pointed out that the input element had no associated label, so I added a aria label to this as well. It also found a contrast error with the footer, so I altered the colour of the text to make it clearer.
+
 ### Known Bugs
+
+There are no currently known bugs with my project.
 
 ---
 
