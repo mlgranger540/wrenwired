@@ -98,7 +98,8 @@ window.openLog = function() {
 
 /**
  * Turn button functions
- * 
+ * Call details from story image objects depending on current element ID, then update both button IDs
+ * Add turn details to session storage to update log
  */
 window.cycleRight = function(element) {
     switch (element.id) {
@@ -242,6 +243,11 @@ window.continue5 = function() {
     continueButton5.hidden = true;
     closeTextbox.hidden = false;
 }
+
+/**
+ * Name input checked again regular expression to ensure only valid names are submitted
+ * If invalid, a custom validity error message shown to user
+ */
 
 window.submitName = function() {
     const regex = new RegExp(/^[a-zA-Z ]+$/,'gi');

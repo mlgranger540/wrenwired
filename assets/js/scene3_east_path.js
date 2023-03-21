@@ -72,7 +72,8 @@ window.openLog = function() {
 
 /**
  * Turn button functions
- * 
+ * Call details from story image objects depending on current element ID, then update both button IDs
+ * Add turn details to session storage to update log
  */
 window.cycleRight = function(element) {
     switch (element.id) {

@@ -32,7 +32,9 @@ When a user loads up the webpage, they are met with a modal containing instructi
 
 The main feature of the game is a frame containing pictures which can be changed using various buttons. A compass indictor in the top right informs users which direction they are currently facing.
 
-Some of the pictures contain clickable areas which can be used to progress to a new location. On the second page, there are two different possible ways to progress, leading to a branching story that changes depending on the user's decisions.
+Some of the pictures contain clickable areas which can be used to progress to a new location. For instance, on the first page, the user can click on a line of trees in the distance, and this moves their character to the edge of the forest.
+
+On the second page, there are two different possible ways to progress, to the east and the west, leading to a branching story that changes depending on the user's decisions.
 
 The title attribute is used on the images and clickable areas to add description to the image and provide clues to the way forward when these elements are hovered over with a mouse.
 
@@ -46,7 +48,7 @@ Within the story frame is a textbox which takes the user through the story, usin
 
 ![Name Input Modal](assets/docs/readme-images/name-input.png)
 
-On the first page, the turn buttons and clickable area are disabled until the user progresses through the text, as this opens a modal allowing them to input a name. The name must only contain letters - numbers and special characters will return a validity error message and not be accepted.
+On the first page, the turn buttons and clickable area are disabled until the user progresses through the text, as this opens a modal allowing them to input a name. In order to ensure only valid names are submitted, I used a regular expression to check whether the input contains only letters - if any other characters such as numbers or special characters are present, the name will be rejected, and users will receive a custom JS validity error message informing them why.
 
 ![Name Input Validity](assets/docs/readme-images/name-validity.png)
 
