@@ -9,7 +9,7 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     color: #dcdcdc;
-    background: #191919 url(../images/wood-texture-dark.jpeg) top center / 100% no-repeat;
+    background: #191919 url(../images/wood-texture-dark.jpeg) top center / 115% no-repeat;
     overflow-x: hidden;
 }
 
@@ -378,10 +378,6 @@ footer h3 {
 }
 
 @media screen and (max-width: 1025px){
-    body {
-        background-size: auto;
-    }
-
     h1 {
         font-size: 250%;
     }
@@ -443,6 +439,10 @@ footer h3 {
 }
 
 @media screen and (max-width: 768px){
+    body {
+        background-size: auto;
+    }
+
     #open-log {
         padding: 2%;
     }
