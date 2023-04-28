@@ -77,10 +77,11 @@ p {
 }
 
 #play-button {
-    padding: 25px 50px;
+    margin-top: 20px;
+    padding: 40px 75px;
     border: 0;
     text-transform: uppercase;
-    font-size: 150%;
+    font-size: 220%;
 }
 
 
@@ -332,11 +333,17 @@ footer h3 {
     }
 
     #instruction-box h2 {
-        font-size: 180%;
+        font-size: 175%;
     }
 
     #instruction-box ul {
-        font-size: 125%;
+        font-size: 120%;
+    }
+
+    #play-button {
+        margin-top: 5px;
+        padding: 23px 43px;
+        font-size: 130%;
     }
 
     .story-frame img {
@@ -368,8 +375,25 @@ footer h3 {
 }
 
 @media screen and (max-width: 1440px){
+    body {
+        background-size: 122%;
+    }
+
     h1 {
         padding: 40px 0 6px 0;
+    }
+
+    #instruction-box h2 {
+        font-size: 160%;
+    }
+
+    #instruction-box ul {
+        font-size: 105%;
+    }
+
+    #play-button {
+        padding: 20px 40px;
+        font-size: 120%;
     }
 
     #compass {
@@ -387,16 +411,16 @@ footer h3 {
     }
 
     #instruction-box h2 {
-        font-size: 130%;
+        font-size: 125%;
     }
 
     #instruction-box ul {
-        font-size: 100%;
+        font-size: 90%;
     }
 
     #play-button {
-        padding: 20px 40px;
-        font-size: 130%;
+        padding: 18px 33px;
+        font-size: 98%;
     }
 
     .panel h3 {
@@ -496,11 +520,11 @@ footer h3 {
     }
 
     #instruction-box h2 {
-        font-size: 120%;
+        font-size: 118%;
     }
 
     #instruction-box ul {
-        font-size: 90%;
+        font-size: 88%;
     }
 
     .story-frame {
