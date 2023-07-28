@@ -36,7 +36,7 @@ export function updateLogOnPage() {
     } else {
         logItems.forEach((x)=>{
             list += `<li>` + storedName + `${x}</li>`;
-        })
+        });
     }
     list += "</ul>";
     logList.innerHTML = list;

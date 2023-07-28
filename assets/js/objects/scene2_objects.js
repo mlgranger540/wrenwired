@@ -39,6 +39,6 @@ const storyImgs = {
         next_left: "turn-left-2",
         next_right: "turn-right-4"
     }
-}
+};
 
 export {storyImgs};

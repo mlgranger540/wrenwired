@@ -69,7 +69,7 @@ window.play = function() {
     storyFrame.hidden = false;
     footer.hidden = false;
     instructionsModal.hidden = true;
-}
+};
 
 /**
  * Open log side panel
@@ -93,7 +93,7 @@ window.openLog = function() {
         openLogButton.style.left = "0%";
         openLogButton.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
     }
-}
+};
 
 
 /**
@@ -148,7 +148,7 @@ window.cycleRight = function(element) {
             addLogItemToStorage(" turned from west to north.");
             break;
     }
-}
+};
 
 window.cycleLeft = function(element) {
     switch (element.id) {
@@ -197,7 +197,7 @@ window.cycleLeft = function(element) {
             addLogItemToStorage(" turned from east to north.");
             break;
     }
-}
+};
 
 
 /**
@@ -209,7 +209,7 @@ window.continue1 = function() {
     text1.id = "text-2";
     continueButton1.hidden = true;
     continueButton2.hidden = false;
-}
+};
 
 window.continue2 = function() {
     let text2 = document.getElementById("text-2");
@@ -217,7 +217,7 @@ window.continue2 = function() {
     text2.id = "text-3";
     continueButton2.hidden = true;
     continueButton3.hidden = false;
-}
+};
 
 window.continue3 = function() {
     let text3 = document.getElementById("text-3");
@@ -225,12 +225,12 @@ window.continue3 = function() {
     text3.id = "text-4";
     continueButton3.hidden = true;
     continueButton4.hidden = false;
-}
+};
 
 window.continue4 = function() {
     continueButton4.hidden = true;
     nameModal.hidden = false;
-}
+};
 
 window.continue5 = function() {
     let text5 = document.getElementById("text-5");
@@ -242,7 +242,7 @@ window.continue5 = function() {
     treeLine.disabled = false;
     continueButton5.hidden = true;
     closeTextbox.hidden = false;
-}
+};
 
 /**
  * Name input checked against regular expression to ensure only valid names are submitted
@@ -275,12 +275,12 @@ window.submitName = function() {
         nameInput.value = "";
         console.log("Please submit a name");
     }
-}
+};
 
 window.closeTextbox = function() {
     textbox.hidden = true;
     closeTextbox.hidden = true;
-}
+};
 
 
 /**
@@ -291,7 +291,7 @@ window.moveChar1 = function() {
     console.log("You found the way forward!");
     addLogItemToStorage(" moved onward to the north.");
     window.location.replace("page2.html");
-}
+};
 
 
 /**
@@ -300,4 +300,4 @@ window.moveChar1 = function() {
 window.reloadGame = function() {
     clearSessionStorage();
     window.location.replace("index.html");
-}
+};

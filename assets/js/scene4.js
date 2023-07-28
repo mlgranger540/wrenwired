@@ -6,4 +6,4 @@ import {clearSessionStorage} from "./session_storage.js";
 window.reloadGame = function() {
     clearSessionStorage();
     window.location.replace("index.html");
-}
+};

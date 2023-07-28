@@ -211,7 +211,7 @@ The project can be cloned by using [this link](https://github.com/mlgranger540/m
 
 ### Content
 
-- All text content was written by me
+- All text and story content was written by me
 
 ### Media
 

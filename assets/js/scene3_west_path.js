@@ -67,7 +67,7 @@ window.openLog = function() {
         openLogButton.style.left = "0%";
         openLogButton.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
     }
-}
+};
 
 
 /**
@@ -122,7 +122,7 @@ window.cycleRight = function(element) {
             addLogItemToStorage(" turned from west to north.");
             break;
     }
-}
+};
 
 window.cycleLeft = function(element) {
     switch (element.id) {
@@ -171,7 +171,7 @@ window.cycleLeft = function(element) {
             addLogItemToStorage(" turned from east to north.");
             break;
     }
-}
+};
 
 
 /**
@@ -183,7 +183,7 @@ window.continue1 = function() {
     text1.id = "text-2";
     continueButton1.hidden = true;
     continueButton2.hidden = false;
-}
+};
 
 window.continue2 = function() {
     let text2 = document.getElementById("text-2");
@@ -194,12 +194,12 @@ window.continue2 = function() {
     turnRight.disabled = false;
     continueButton2.hidden = true;
     closeTextbox.hidden = false;
-}
+};
 
 window.closeTextbox = function() {
     textbox.hidden = true;
     closeTextbox.hidden = true;
-}
+};
 
 
 /**
@@ -210,7 +210,7 @@ window.moveChar1 = function() {
     console.log("You found a way forward!");
     addLogItemToStorage(" moved onward to the west.");
     window.location.replace("page4.html");
-}
+};
 
 
 /**
@@ -219,4 +219,4 @@ window.moveChar1 = function() {
 window.reloadGame = function() {
     clearSessionStorage();
     window.location.replace("index.html");
-}
+};
