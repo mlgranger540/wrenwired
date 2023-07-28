@@ -177,6 +177,10 @@ CSS passed through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) 
 
 ![CSS Validation](assets/docs/readme-images/css-validation.png)
 
+All JavaScript code was passed through [JS Lint](https://www.jslint.com/) and returned no errors, except noting that I had an unused event in a few places. There were some missing semi-colons which I have rectified.
+
+![JS Lint](assets/docs/readme-images/js-lint.png)
+
 ### Accessibility
 
 [WAVE](https://wave.webaim.org/) was used to assess the accessbility of the website.
