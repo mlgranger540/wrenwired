@@ -1,6 +1,6 @@
 # Wrenwired - Choose-Your-Own-Adventure Game
 
-This project is a point-and-click choose-your-own-adventure style game about a character who wakes up with no memories and has to figure out what happened to them.
+This project is a point-and-click choose-your-own-adventure style game about a character who wakes up with no memories and has to figure out what happened to them. It uses JavaScript to create an interactive game experience by responding to the user's actions and changing elements on the page accordingly. The live site has been deployed to GitHub Pages.
 
 ![Wrenwired](assets/docs/readme-images/wrenwired.png)
 
@@ -12,9 +12,45 @@ View the live project [here](https://mlgranger540.github.io/milestone-2/).
 
 ### Goals
 
-- Goals for new visitors - play the game and explore the story, get expected functionality from buttons and features, get feedback for actions, have fun
+- Goals for new visitors
 
-- Goals for return visitors - replay the game, try different options/paths
+    - Play the game and explore the story
+
+    - Get expected functionality from buttons and features
+
+    - Get feedback for actions
+
+    - Interactivity and personalisation in the game e.g. elements respond to mouse actions, name is stored and used during gameplay
+
+    - Have fun!
+
+- Goals for return visitors
+
+    - Replay the game
+
+    - Try different options/paths to explore different story endings
+
+- Goals for site creator
+
+    - Create a fun and entertaining game experience for others to enjoy
+
+    - Write and share the story of the game
+
+---
+
+## Design
+
+The initial design of the project was mapped out with a wireframe using [Justinmind](https://www.justinmind.com/).
+
+![Wrenwired Wireframe](assets/docs/wireframes/wireframe.png)
+
+I used this as a basis to build the structure of the final project with HTML, CSS, Bootstrap and JavaScript.
+
+The colour scheme of the site is black and white, as I felt this would be quite striking while not detracting from the story of the game. It also adds to the mysterious, eerie atmosphere of the game, what with the character waking up on their own in the middle of nowhere with no memory of their life or how they got there.
+
+The pages feature a black and white background image of tree bark. All the story images were drawn myself using a digital art software and a graphics tablet, using brushes that imitate materials such as crayon, charcoal and chalk, to create a simple but effective aesthetic. Unfortunately due to time constraints, the images used in the third scenes are a lot more basic/rushed.
+
+I used the font Impact for the title, as this font is very striking and eye-catching while remaining simplistic. The rest of the site uses the font Courier New, as I think the 'code-like' look of this font adds to the mysterious feel of the game.
 
 ---
 
@@ -34,9 +70,13 @@ The main feature of the game is a frame containing pictures which can be changed
 
 Some of the pictures contain clickable areas which can be used to progress to a new location. For instance, on the first page, the user can click on a line of trees in the distance, and this moves their character to the edge of the forest.
 
-On the second page, there are two different possible ways to progress, to the east and the west, leading to a branching story that changes depending on the user's decisions.
-
 The title attribute is used on the images and clickable areas to add description to the image and provide clues to the way forward when these elements are hovered over with a mouse.
+
+![Title Hover](assets/docs/readme-images/title-hover.png)
+
+On the second scene of the game, there are two different possible ways to progress, one to the east and one to the west, leading to a branching story that changes depending on the user's decisions. Unforunately, the story at this stage is not complete, however both paths do have a route through to the 'Thank you for playing' page that signals the end of the game.
+
+![Thanks for Playing Page](assets/docs/readme-images/thanks-for-playing.png)
 
 ### Textbox
 
@@ -81,26 +121,8 @@ Beneath the turn buttons, there is a start over button, which reloads the websit
 ### Improvements and Features to Add
 
 - Unfortunately, due to time constraints on this project, the game is a lot shorter than I wanted it to be. I originally planned to have a much longer, more branching story, but in the end I had to reduce the scope of the game in order to focus on features and functionality.
-
 - I had originally thought of putting a soundtrack behind the game, but this is a feature I sadly didn't have time to add.
-
 - Another idea I had was to have a way to pick up items that could then be used later, such as picking up a key to open a locked door, but this was another feature I didn't get to add in the end.
-
----
-
-## Design
-
-The initial design of the project was mapped out with a wireframe using [Justinmind](https://www.justinmind.com/).
-
-![Wrenwired Wireframe](assets/docs/wireframes/wireframe.png)
-
-I used this as a basis to build the structure of the final project with HTML, CSS, Bootstrap and JavaScript.
-
-The colour scheme of the site is black and white, as I felt this would be quite striking while not detracting from the story of the game.
-
-The pages feature a black and white background image of tree bark. All the story images were drawn myself using a digital art software and a graphics tablet, using brushes that imitate materials such as crayon, charcoal and chalk, to create a simple but effective aesthetic. Unfortunately due to time constraints, the images on the third pages are a lot more basic/rushed.
-
-I used the font Impact for the title, as this font is very striking and eye-catching while remaining simplistic. The rest of the site uses the font Courier New, as I think the 'code-like' look of this font adds to the mysterious feel of the game.
 
 ---
 
@@ -143,7 +165,7 @@ My project was thoroughly tested throughout the development process by both myse
 
 ### Compatibility
 
-- The game was tested on Google Chrome, Firefox, Microsoft Edge and Safari to ensure that the website worked well on all browsers. No major issues were found on any of these.
+- The game was tested on Google Chrome, Mozilla Firefox, Microsoft Edge and Safari to ensure that the website worked well on all browsers. No notable issues were found on any of these.
 
 ### Validation
 
