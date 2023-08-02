@@ -197,9 +197,21 @@ There are no currently known bugs with my project.
 
 ## Deployment
 
-The project was deployed to GitHub Pages by going to the settings of the repository on GitHub, going to the pages section, and deploying from branch main.
+This project was deployed to GitHub Pages. To do this, I followed these steps:
 
-The project can be cloned by using [this link](https://github.com/mlgranger540/milestone-1.git) with the `git clone` command.
+1. Log in to GitHub and navigate to the project repository
+2. Go to the settings tab within the repository
+3. Click on the 'Pages' subsection
+4. Under 'Build and Deployment', make sure the 'Source' dropdown is set to 'Deploy from a branch'
+5. Select the 'Branch' dropdown and choose the option 'Main'
+6. Make sure the folder is set to '/ (root)'
+7. Click 'Save'
+8. The live site will then be built and deployed to GitHub pages using the project repository code
+8. Once deployed, the link to the live site will appear at the top of the 'Pages' section of settings and will be in the form https://*github-username*.github.io/*repository-name*/
+
+The repository can be forked to create a copy of the repo in the user's GitHub account. Changes made to the forked repository will not affect the original repo. This can be done by clicking the 'Fork' button at the top of the repository page.
+
+The repository can also be cloned to be create a local copy of the repo. This can be done by using the link https://github.com/mlgranger540/milestone-1.git with the `git clone` command to clone using HTTPS. Alternatively GitHub desktop can be used by clicking the 'Code' dropdown on the repository page and selecting 'Open with GitHub Desktop', then following the instructions to create the clone on your local machine.
 
 ---
 
